@@ -5,11 +5,11 @@ const WarriorList = () => {
         <div>
             {warriors.map((subClass) => {
                 return(
-                <div>
+                <li key={subClass.id}>
                     <h2>{subClass.class}</h2>
                     <p>{subClass.description}</p>
                     <img src={subClass.avatar} alt={`A cute little ${subClass.class}`} />
-                </div>
+                </li>
                 )
             })}
         </div>

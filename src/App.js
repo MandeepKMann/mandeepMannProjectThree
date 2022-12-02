@@ -9,7 +9,9 @@ function App() {
     <div className="App">
         <header>
             <h1>Path of the Warrior</h1>
+            <ul>
             <WarriorList />
+            </ul>
             
         </header>
     </div>
