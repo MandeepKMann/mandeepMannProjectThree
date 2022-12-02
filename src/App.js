@@ -1,9 +1,9 @@
 import app from './firebase.js'
-import { useState } from 'react';
-import { getDatabase, ref, push } from 'firebase/database';
-import warriors from './warriors.js';
+import { useEffect, useState } from 'react';
+import { getDatabase, ref, push, onValue } from 'firebase/database';
 import WarriorList from './WarriorList.js';
 import Form from './Form.js';
+import Characters from './Characters.js';
 import './App.css';
 
 function App() {
@@ -32,19 +32,32 @@ function App() {
         push(dbRef, userInput);
     }
 
+    useEffect( () => {
+        const database = getDatabase(app);
+        const dbRef = ref(database);
+
+        onValue(dbRef, (response) => {
+            const data = response.val()
+            const characterList = []
+            characterList.push(data)
+        })
+
+
+    }, [] )
+
 
     return (
         <div className="App">
             <header>
                 <h1>Path of the Warrior</h1>
                 <ul>
-                <Form
-                handleChange={handleChange}
-                userInput={userInput}
-                handleSubmit={handleSubmit}
-                />
-                <WarriorList />
-                
+                    <WarriorList />
+                    <Form
+                        handleChange={handleChange}
+                        userInput={userInput}
+                        handleSubmit={handleSubmit}
+                    />
+                    
                 </ul>
             </header>
         </div>
