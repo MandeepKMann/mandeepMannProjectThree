@@ -1,4 +1,10 @@
-const Characters = () => {
+const Characters = ({data}) => {
+    
+
+
+    // return (
+
+    // )
 
 }
 

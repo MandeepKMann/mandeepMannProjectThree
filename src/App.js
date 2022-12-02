@@ -13,6 +13,7 @@ function App() {
         userCharName: ""
     })
 
+    const [characterList, setCharacterList] = useState({})
 
 // https://www.youtube.com/watch?v=-KBS93RlUCY
     const handleChange = (e) => {
@@ -38,13 +39,26 @@ function App() {
 
         onValue(dbRef, (response) => {
             const data = response.val()
-            const characterList = []
-            characterList.push(data)
+            // convert the value of the object into an array with arrays
+            const jaggedArray = Object.entries(data);
+      
+            // destructure that array to separate the key and value and push the value into the new dataArray
+            const dataArray = []
+            jaggedArray.forEach(([key, value]) => {
+                dataArray.push(value)
+                    // push the key from the jaggedArray into the dataArray 
+                    dataArray.forEach((object) => {
+                        object.key = key
+                    })
+            })
+
+            // push the dataArray into the characterList stateful variable
+            setCharacterList(dataArray)
+
         })
-
-
     }, [] )
 
+    console.log(characterList)
 
     return (
         <div className="App">
@@ -57,7 +71,9 @@ function App() {
                         userInput={userInput}
                         handleSubmit={handleSubmit}
                     />
-                    
+                    <Characters
+                        data={characterList}
+                    />
                 </ul>
             </header>
         </div>
