@@ -1,8 +1,15 @@
+import heroImg from "./assets/warriorsAssets/hero.png"
+
+import paladinImg from "./assets/warriorsAssets/paladin.png"
+
+import darkKnightImg from "./assets/warriorsAssets/darkKnight.png"
+
 const warriors = [
     {
     id: 1,
     class: "Hero",
-    url: "https://drive.google.com/file/d/1JllKjl9CK-piqLknHJMwI9twRoWdSW_Z/view?usp=share_link",
+    url: "./assets/warriorsAssets/hero.png",
+    urlName: heroImg,
     avatar: 
         [
         "./assets/warriors/heroAvatarOne.png",
@@ -22,6 +29,7 @@ const warriors = [
     id: 2,
     class: "Paladin",
     url: "./assets/warriors/paladin.png",
+    urlName: paladinImg,
     avatar: 
         [
         "./assets/warriors/paladinAvatarOne.png",
@@ -41,6 +49,7 @@ const warriors = [
     id: 3,
     class: "Dark Knight",
     url: "./assets/warriors/darkKnight.png",
+    urlName: darkKnightImg,
     avatar: 
         [
         "./assets/warriors/darkKnightAvatarOne.png",
