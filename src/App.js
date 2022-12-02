@@ -64,8 +64,9 @@ function App() {
         <div className="App">
             <header>
                 <h1>Path of the Warrior</h1>
-                <ul>
+                <ul className='warriorsInfo'>
                     <WarriorList />
+                </ul>
                     <Form
                         handleChange={handleChange}
                         userInput={userInput}
@@ -74,7 +75,6 @@ function App() {
                     <Characters
                         data={characterList}
                     />
-                </ul>
             </header>
         </div>
     );

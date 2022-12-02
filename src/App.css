@@ -30,3 +30,12 @@ ul {
 h1 {
     text-align: center;
 }
+
+.warriorsInfo {
+    display: flex;
+}
+
+.subClassInfo {
+    display: flex;
+    flex-direction: column;
+}
