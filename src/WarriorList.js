@@ -1,6 +1,6 @@
 import warriors from "./warriors.js";
 
-import hero from "./assets/warriorsAssets/hero.png"
+// import hero from "./assets/warriorsAssets/hero.png"
 
 const WarriorList = () => {
     return (
