@@ -1,13 +1,17 @@
 import app from './firebase.js'
-
+import { useState } from 'react';
 import warriors from './warriors.js';
-
+import WarriorList from './WarriorList.js';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-
+        <header>
+            <h1>Path of the Warrior</h1>
+            <WarriorList />
+            
+        </header>
     </div>
   );
 }
