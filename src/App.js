@@ -1,4 +1,7 @@
 import app from './firebase.js'
+
+import warriors from './warriors.js';
+
 import './App.css';
 
 function App() {
