@@ -1,4 +1,4 @@
-const Form = ({handleChange, userSelectedInput, userTextInput, handleSubmit}) => {
+const Form = ({handleChange, userInput, handleSubmit}) => {
     return (
         <form onSubmit={handleSubmit}>
             <label htmlFor="userSelection"></label>
@@ -6,9 +6,9 @@ const Form = ({handleChange, userSelectedInput, userTextInput, handleSubmit}) =>
                 onChange={handleChange}
                 name="userSelection" 
                 id="userSelection"
-                value={userSelectedInput}
+                value={userInput}
             >
-                <option value="" disabled>Select a Subclass</option>
+                <option value="" disabled>Pick a Subclass</option>
                 <option value="Hero">Hero</option>
                 <option value="Paladin">Paladin</option>
                 <option value="Dark Knight">Dark Knight</option>
@@ -20,10 +20,10 @@ const Form = ({handleChange, userSelectedInput, userTextInput, handleSubmit}) =>
                 onChange={handleChange} 
                 type="text"
                 id="userCharName"
-                value={userTextInput}
+                value={userInput}
              />
 
-             <button type="submit">Confirm</button>
+             <button type="submit">hi i'm a button~</button>
         </form>
     )
 }

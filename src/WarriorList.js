@@ -4,8 +4,6 @@ const WarriorList = () => {
     return (
         <div>
             {warriors.map((subClass) => {
-            console.log(subClass.url)
-                // console.log(subClass.url)
                 return(
                 <li key={subClass.id}>
                     <h2>{subClass.class}</h2>

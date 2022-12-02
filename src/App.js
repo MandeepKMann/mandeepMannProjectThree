@@ -1,7 +1,7 @@
 import app from './firebase.js'
 import { useState } from 'react';
 import { getDatabase, ref, push } from 'firebase/database';
-// import warriors from './warriors.js';
+import warriors from './warriors.js';
 import WarriorList from './WarriorList.js';
 import Form from './Form.js';
 import './App.css';
