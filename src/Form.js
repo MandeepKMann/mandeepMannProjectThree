@@ -1,4 +1,10 @@
+// const Form = ({handleChange, userTextInput, userSelectInput, handleSubmit}) => {
 const Form = ({handleChange, userInput, handleSubmit}) => {
+
+    // Mandy from helpcue was super helpful in helping me reorganize my props!
+    const userSelectInput = userInput.userSelection
+    const userTextInput = userInput.userCharName
+
     return (
         <form onSubmit={handleSubmit}>
             <label htmlFor="userSelection"></label>
@@ -6,7 +12,7 @@ const Form = ({handleChange, userInput, handleSubmit}) => {
                 onChange={handleChange}
                 name="userSelection" 
                 id="userSelection"
-                value={userInput}
+                value={userSelectInput}
             >
                 <option value="" disabled>Pick a Subclass</option>
                 <option value="Hero">Hero</option>
@@ -20,7 +26,7 @@ const Form = ({handleChange, userInput, handleSubmit}) => {
                 onChange={handleChange} 
                 type="text"
                 id="userCharName"
-                value={userInput}
+                value={userTextInput}
              />
 
              <button type="submit">hi i'm a button~</button>

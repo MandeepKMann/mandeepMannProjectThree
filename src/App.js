@@ -8,9 +8,6 @@ import './App.css';
 
 function App() {
     
-    const [userSelectedInput, setUserSelectedInput] = useState('')
-    const [userTextInput, setUserTextInput] = useState('')
-    
     const [userInput, setUserInput] = useState({
         userSelection: "",
         userCharName: ""
@@ -21,19 +18,9 @@ function App() {
     const handleChange = (e) => {
         const {name, value} = e.target
 
-        setUserTextInput((prev) => {
-            return {...prev, [name]: value}
-        })
-
-        setUserSelectedInput((prev) => {
-            return {...prev, [name]: value}
-        })
-
         setUserInput((prev) => {
             return {...prev, [name]: value}
         })
-
-        console.log(e.target.value)
     }
 
     const handleSubmit = (e) => {
@@ -43,7 +30,6 @@ function App() {
         const dbRef = ref(database);
 
         push(dbRef, userInput);
-        console.log(userInput)
     }
 
 
@@ -52,13 +38,12 @@ function App() {
             <header>
                 <h1>Path of the Warrior</h1>
                 <ul>
-                <WarriorList />
                 <Form
                 handleChange={handleChange}
-                userSelectedInput={userSelectedInput}
-                userTextInput={userTextInput}
+                userInput={userInput}
                 handleSubmit={handleSubmit}
                 />
+                <WarriorList />
                 
                 </ul>
             </header>
@@ -67,3 +52,69 @@ function App() {
 }
 
 export default App;
+
+
+
+// const Form = ({handleChange, userInput, handleSubmit}) => {
+//     return (
+//         <form onSubmit={handleSubmit}>
+//             <label htmlFor="userSelection"></label>
+//             <select 
+//                 onChange={handleChange}
+//                 name="userSelection" 
+//                 id="userSelection"
+//                 value={userInput}
+//             >
+//                 <option value="" disabled>Pick a Subclass</option>
+//                 <option value="Hero">Hero</option>
+//                 <option value="Paladin">Paladin</option>
+//                 <option value="Dark Knight">Dark Knight</option>
+//             </select>
+
+//             <label htmlFor="userCharName"></label>
+//             <input
+//                 name="userCharName"
+//                 onChange={handleChange} 
+//                 type="text"
+//                 id="userCharName"
+//                 value={userInput}
+//              />
+
+//              <button type="submit">hi i'm a button~</button>
+//         </form>
+//     )
+// }
+
+// export default Form;
+
+// const Form = ({handleChange, userTextInput, userSelectInput, handleSubmit}) => {
+//     return (
+//         <form onSubmit={handleSubmit}>
+//             <label htmlFor="userSelection"></label>
+//             <select 
+//                 onChange={handleChange}
+//                 name="userSelection" 
+//                 id="userSelection"
+//                 value={userSelectInput}
+//             >
+//                 <option value="" disabled>Pick a Subclass</option>
+//                 <option value="Hero">Hero</option>
+//                 <option value="Paladin">Paladin</option>
+//                 <option value="Dark Knight">Dark Knight</option>
+//             </select>
+
+//             <label htmlFor="userCharName"></label>
+//             <input
+//                 name="userCharName"
+//                 onChange={handleChange} 
+//                 type="text"
+//                 id="userCharName"
+//                 value={userTextInput}
+//              />
+
+//              <button type="submit">hi i'm a button~</button>
+//         </form>
+//     )
+// }
+
+// export default Form;
