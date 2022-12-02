@@ -7,21 +7,38 @@ import Form from './Form.js';
 import './App.css';
 
 function App() {
-    
 
+    const [userInput, setUserInput] = useState({
+        userSelection: "",
+        userCharName: ""
+    })
 
-  return (
-    <div className="App">
-        <header>
-            <h1>Path of the Warrior</h1>
-            <ul>
-            <WarriorList />
-            <Form />
-            
-            </ul>
-        </header>
-    </div>
-  );
+// https://www.youtube.com/watch?v=-KBS93RlUCY
+    const handleChange = (e) => {
+        const name = e.target.name;
+        const value = e.target.value;
+        setUserInput((prev) => {
+            return {...prev, [name]: value}
+        })
+    }
+
+    console.log(userInput)
+
+    return (
+        <div className="App">
+            <header>
+                <h1>Path of the Warrior</h1>
+                <ul>
+                <WarriorList />
+                <Form
+                handleChange={handleChange}
+                userInput={userInput}
+                />
+                
+                </ul>
+            </header>
+        </div>
+    );
 }
 
 export default App;

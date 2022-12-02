@@ -1,9 +1,9 @@
-const Form = () => {
+const Form = ({handleChange, userInput, userSelection, handleSubmit}) => {
     return (
         <form>
             <label htmlFor="userSelection"></label>
             <select 
-                // onChange={SOMETHING}
+                onChange={handleChange}
                 name="userSelection" 
                 id="userSelection"
                 // value={SOMETHING}
@@ -16,7 +16,7 @@ const Form = () => {
 
             <label htmlFor="userCharName"></label>
             <input
-                // onChange={SOMETHING} 
+                onChange={handleChange} 
                 type="text"
                 id="userCharName"
                 // value={SOMETHING}
