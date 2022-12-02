@@ -11,6 +11,10 @@ const WarriorList = () => {
                     <h2>{subClass.class}</h2>
                     <p>{subClass.description}</p>
                     <img src={subClass.urlName} alt={`A cute little ${subClass.class}`} />
+                    <ul className="mainSkill">
+                        <li><img src={subClass.mainAttack.urlName} alt={`Icon for ${subClass.mainAttack.skillName} skill`} /></li>
+                        <li>{subClass.mainAttack.description}</li>
+                    </ul>
                 </li>
                 )
             })}
