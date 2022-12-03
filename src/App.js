@@ -1,9 +1,11 @@
 import app from './firebase.js'
-import { useEffect, useState } from 'react';
+import { Fragment, useEffect, useState } from 'react';
 import { getDatabase, ref, push, onValue } from 'firebase/database';
+
 import WarriorList from './WarriorList.js';
 import Form from './Form.js';
 import Characters from './Characters.js';
+
 import './App.css';
 
 function App() {
@@ -61,12 +63,19 @@ function App() {
     console.log(characterList)
 
     return (
-        <div className="App">
+        <Fragment>
             <header>
-                <h1>Path of the Warrior</h1>
-                <ul className='warriorsInfo'>
-                    <WarriorList />
-                </ul>
+                <div className="backgroundContainer">
+                </div>
+            </header>
+
+            <main>
+
+                <section className='information'>
+                    <h2 className='infoTitle'>Path of the Warrior</h2>
+                    <ul className='warriorsInfo'>
+                        <WarriorList />
+                    </ul>
                     <Form
                         handleChange={handleChange}
                         userInput={userInput}
@@ -75,8 +84,14 @@ function App() {
                     <Characters
                         data={characterList}
                     />
-            </header>
-        </div>
+                </section>
+    
+            </main>
+
+
+
+
+        </Fragment>
     );
 }
 

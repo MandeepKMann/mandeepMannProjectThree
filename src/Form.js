@@ -13,6 +13,7 @@ const Form = ({handleChange, userInput, handleSubmit}) => {
                 name="userSelection" 
                 id="userSelection"
                 value={userSelectInput}
+                required
             >
                 <option value="" disabled>Pick a Subclass</option>
                 <option value="Hero">Hero</option>
@@ -27,6 +28,7 @@ const Form = ({handleChange, userInput, handleSubmit}) => {
                 type="text"
                 id="userCharName"
                 value={userTextInput}
+                required
              />
 
              <button type="submit">hi i'm a button~</button>

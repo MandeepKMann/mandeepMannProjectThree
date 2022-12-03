@@ -23,19 +23,54 @@ html { box-sizing: border-box;}
     text-align: center;
 }
 
+html {
+    /* 1rem = 20px */
+    font-size: 125%;
+}
+
 ul {
     list-style: none;
+    margin-left: none;
 }
 
 h1 {
     text-align: center;
 }
 
-.warriorsInfo {
-    display: flex;
+header {
+    height: 100vh;
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.7)
+            ),
+        url(./assets/mapleShipBackground.jpg) no-repeat center;
+    background-size: cover;
 }
 
-.subClassInfo {
+.backgroundContainer {
+    height: 100vh;
+    background: 
+        url(./assets/explorers.png) no-repeat right, 
+        url(./assets/maplestoryLogo.png)  no-repeat 15% 15%;
+    
+}
+
+.information {
+    background: url(./assets/perionBackground.jpg) no-repeat center;
+    background-size: cover;
+    padding: 100px 0 100px 0;
+}
+
+.infoTitle {
+    margin-bottom: 100px;
+    font-size: 3rem;
+}
+
+.warriorsInfo {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
 }
