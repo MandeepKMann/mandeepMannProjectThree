@@ -51,7 +51,7 @@ header {
 .backgroundContainer {
     height: 100vh;
     background: 
-        url(./assets/explorers.png) no-repeat right, 
+        url(./assets/explorers.png) no-repeat 95%, 
         url(./assets/maplestoryLogo.png)  no-repeat 15% 15%;
     
 }

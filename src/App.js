@@ -76,6 +76,9 @@ function App() {
                     <ul className='warriorsInfo'>
                         <WarriorList />
                     </ul>
+                </section>
+
+                <section>
                     <Form
                         handleChange={handleChange}
                         userInput={userInput}
@@ -84,6 +87,7 @@ function App() {
                     <Characters
                         data={characterList}
                     />
+
                 </section>
     
             </main>
