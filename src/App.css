@@ -56,12 +56,14 @@ ul {
     gap: 100px;
 }
 
-.divider p{
+.divider i {
     padding: none;
     width: fit-content;
     font-size: 3rem;
     margin: 0px;
     color: #616161;
+    display: flex;
+    align-items: center;
 }
 
 h1 {
