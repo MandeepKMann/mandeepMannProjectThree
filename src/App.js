@@ -41,7 +41,7 @@ function App() {
             userSelection: "",
             userCharName: ""
         })
-
+       
         Swal.fire({
             icon: 'success',
             text: 'Your character has been created!',
@@ -51,7 +51,6 @@ function App() {
             showConfirmButton: false,
             timer: 2500
         })
-        
     }
     
 
