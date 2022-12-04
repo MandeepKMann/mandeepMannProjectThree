@@ -23,9 +23,16 @@ html { box-sizing: border-box;}
     text-align: center;
 }
 
+
 html {
     /* 1rem = 20px */
     font-size: 125%;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600&display=swap');
+
+body {
+    font-family: 'Exo 2', sans-serif;
 }
 
 ul {

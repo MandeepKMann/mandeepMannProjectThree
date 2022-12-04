@@ -10,7 +10,7 @@ const Form = ({handleChange, userInput, handleSubmit}) => {
         <div className="formContainer">
             <h2>Create Your Warrior</h2>
             <form className="form" onSubmit={handleSubmit}>
-                <label htmlFor="userSelection">Select your warrior:</label>
+                <label htmlFor="userSelection">Select Your Subclass:</label>
                 <select 
                     onChange={handleChange}
                     name="userSelection" 
@@ -18,7 +18,7 @@ const Form = ({handleChange, userInput, handleSubmit}) => {
                     value={userSelectInput}
                     required
                 >
-                    <option value="" disabled>Pick a Subclass</option>
+                    <option value="" disabled>Select One</option>
                     <option value="Hero">Hero</option>
                     <option value="Paladin">Paladin</option>
                     <option value="Dark Knight">Dark Knight</option>
