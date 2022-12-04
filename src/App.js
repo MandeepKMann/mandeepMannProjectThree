@@ -5,7 +5,7 @@ import { getDatabase, ref, push, onValue } from 'firebase/database';
 import WarriorList from './WarriorList.js';
 import Form from './Form.js';
 import Characters from './Characters.js';
-
+import Divider from './Divider.js';
 import './App.css';
 
 function App() {
@@ -65,20 +65,25 @@ function App() {
     return (
         <Fragment>
             <header>
-                <div className="backgroundContainer">
+                <div className="wrapper">
+                    <div className="backgroundContainer"></div>
                 </div>
             </header>
 
             <main>
-
+                <Divider />
                 <section className='information'>
-                    <h2 className='infoTitle'>Path of the Warrior</h2>
-                    <ul className='warriorsInfo'>
-                        <WarriorList />
-                    </ul>
+                    <div className="wrapper">
+                        <h2 className='infoTitle'>Path of the Warrior</h2>
+                        <ul className='warriorsInfo'>
+                            <WarriorList />
+                        </ul>
+                    </div>
                 </section>
 
-                <section>
+               <Divider />
+               
+                <section className='formSection'>
                     <Form
                         handleChange={handleChange}
                         userInput={userInput}

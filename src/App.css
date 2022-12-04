@@ -33,6 +33,30 @@ ul {
     margin-left: none;
 }
 
+.wrapper {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1920px;
+}
+
+.divider {
+    height: 8vh;
+    background-color: #0F141A;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+}
+
+.divider p{
+    padding: none;
+    width: fit-content;
+    font-size: 3rem;
+    margin: 0px;
+    color: #616161;
+}
+
 h1 {
     text-align: center;
 }
@@ -41,8 +65,8 @@ header {
     height: 100vh;
     background:
         linear-gradient(
-            rgba(0, 0, 0, 0.7),
-            rgba(0, 0, 0, 0.7)
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
             ),
         url(./assets/mapleShipBackground.jpg) no-repeat center;
     background-size: cover;
@@ -51,13 +75,18 @@ header {
 .backgroundContainer {
     height: 100vh;
     background: 
-        url(./assets/explorers.png) no-repeat 95%, 
-        url(./assets/maplestoryLogo.png)  no-repeat 15% 15%;
+        url(./assets/explorers.png) no-repeat 105%, 
+        url(./assets/maplestoryLogo.png)  no-repeat 0% 20%;
     
 }
 
 .information {
-    background: url(./assets/perionBackground.jpg) no-repeat center;
+    background: 
+        linear-gradient(
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.6)
+            ),
+        url(./assets/perionBackground.jpg) no-repeat center;
     background-size: cover;
     padding: 100px 0 100px 0;
 }

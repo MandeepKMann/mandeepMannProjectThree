@@ -1,4 +1,5 @@
-// const Form = ({handleChange, userTextInput, userSelectInput, handleSubmit}) => {
+import "./Form.css"
+
 const Form = ({handleChange, userInput, handleSubmit}) => {
 
     // Mandy from helpcue was super helpful in helping me reorganize my props!
@@ -6,33 +7,36 @@ const Form = ({handleChange, userInput, handleSubmit}) => {
     const userTextInput = userInput.userCharName
 
     return (
-        <form onSubmit={handleSubmit}>
-            <label htmlFor="userSelection"></label>
-            <select 
-                onChange={handleChange}
-                name="userSelection" 
-                id="userSelection"
-                value={userSelectInput}
-                required
-            >
-                <option value="" disabled>Pick a Subclass</option>
-                <option value="Hero">Hero</option>
-                <option value="Paladin">Paladin</option>
-                <option value="Dark Knight">Dark Knight</option>
-            </select>
+        <div className="formContainer">
+            <h2>Create Your Warrior</h2>
+            <form className="form" onSubmit={handleSubmit}>
+                <label htmlFor="userSelection">Select your warrior:</label>
+                <select 
+                    onChange={handleChange}
+                    name="userSelection" 
+                    id="userSelection"
+                    value={userSelectInput}
+                    required
+                >
+                    <option value="" disabled>Pick a Subclass</option>
+                    <option value="Hero">Hero</option>
+                    <option value="Paladin">Paladin</option>
+                    <option value="Dark Knight">Dark Knight</option>
+                </select>
 
-            <label htmlFor="userCharName"></label>
-            <input
-                name="userCharName"
-                onChange={handleChange} 
-                type="text"
-                id="userCharName"
-                value={userTextInput}
-                required
-             />
+                <label htmlFor="userCharName">Character Name:</label>
+                <input
+                    name="userCharName"
+                    onChange={handleChange} 
+                    type="text"
+                    id="userCharName"
+                    value={userTextInput}
+                    required
+                />
 
-             <button type="submit">hi i'm a button~</button>
-        </form>
+                <button type="submit">Create Characrer</button>
+            </form>
+        </div>
     )
 }
 

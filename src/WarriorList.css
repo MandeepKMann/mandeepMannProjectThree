@@ -6,6 +6,7 @@
     border: 2px solid black;
     border-radius: 1%;
     background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
 }
 
 .subClassName {
@@ -22,6 +23,10 @@
 
 .imageContainer {
     width: auto;
+}
+
+.imageContainer img {
+    max-width: 100%;
 }
 
 .mainSkill {
