@@ -1,7 +1,7 @@
 import app from './firebase.js'
 import { Fragment, useEffect, useState } from 'react';
 import { getDatabase, ref, push, onValue } from 'firebase/database';
-
+import Swal from 'sweetalert2'
 import WarriorList from './WarriorList.js';
 import Form from './Form.js';
 import Characters from './Characters.js';
@@ -24,7 +24,10 @@ function App() {
         setUserInput((prev) => {
             return {...prev, [name]: value}
         })
+
+
     }
+    
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -33,7 +36,24 @@ function App() {
         const dbRef = ref(database);
 
         push(dbRef, userInput);
+
+        setUserInput({
+            userSelection: "",
+            userCharName: ""
+        })
+
+        Swal.fire({
+            icon: 'success',
+            text: 'Your character has been created!',
+            background: '#0F141A',
+            color: 'white',
+            borderRadius: '1',
+            showConfirmButton: false,
+            timer: 2500
+        })
+        
     }
+    
 
     useEffect( () => {
         const database = getDatabase(app);
@@ -59,8 +79,6 @@ function App() {
 
         })
     }, [] )
-
-    console.log(characterList)
 
     return (
         <Fragment>
