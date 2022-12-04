@@ -82,7 +82,7 @@ function App() {
                 </section>
 
                <Divider />
-               
+
                 <section className='formSection'>
                     <Form
                         handleChange={handleChange}

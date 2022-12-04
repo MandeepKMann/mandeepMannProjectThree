@@ -31,13 +31,24 @@ html {
 
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600&display=swap');
 
-body {
+body,
+button {
     font-family: 'Exo 2', sans-serif;
+}
+
+button {
+    line-height: 1.5;
+    font-size: 2rem;
+    font-weight: bold;
 }
 
 ul {
     list-style: none;
     margin-left: none;
+}
+
+p {
+    line-height: 1.5;
 }
 
 .wrapper {

@@ -34,7 +34,7 @@ const Form = ({handleChange, userInput, handleSubmit}) => {
                     required
                 />
 
-                <button type="submit">Create Characrer</button>
+                <button type="submit">Create Character</button>
             </form>
         </div>
     )
