@@ -1,11 +1,18 @@
-import app from './firebase.js'
 import { Fragment, useEffect, useState } from 'react';
 import { getDatabase, ref, push, onValue } from 'firebase/database';
+
+// Installed
+import app from './firebase.js'
 import Swal from 'sweetalert2'
+
+// Sections
 import WarriorList from './WarriorList.js';
 import Form from './Form.js';
 import Characters from './Characters.js';
 import Divider from './Divider.js';
+import Header from './Header.js';
+
+// CSS
 import './App.css';
 
 function App() {
@@ -96,11 +103,7 @@ function App() {
 
     return (
         <Fragment>
-            <header>
-                <div className="wrapper">
-                    <div className="backgroundContainer"></div>
-                </div>
-            </header>
+            <Header />
 
             <main>
                 
@@ -108,10 +111,7 @@ function App() {
                 
                 <section className='information'>
                     <div className="wrapper">
-                        <h2 className='infoTitle'>Path of the Warrior</h2>
-                        <ul className='warriorsInfo'>
-                            <WarriorList />
-                        </ul>
+                        <WarriorList />
                     </div>
                 </section>
 
@@ -128,7 +128,7 @@ function App() {
 
                 <Divider />
                 
-                <section>
+                <section className='pastCharactersSection'>
                     <ul>
                         <Characters
                             characterList={characterList}

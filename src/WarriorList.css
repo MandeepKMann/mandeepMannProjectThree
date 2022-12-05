@@ -16,7 +16,6 @@
 .subClassDescription, 
 .mainSkill p {
     max-width: 550px;
-    color: white;
     font-weight: bold;
     font-size: 1rem;
 }

@@ -50,6 +50,7 @@ ul {
 
 p {
     line-height: 1.5;
+    color: white;
 }
 
 .wrapper {
@@ -84,21 +85,25 @@ h1 {
 
 header {
     height: 100vh;
-    background:
-        linear-gradient(
-            rgba(0, 0, 0, 0.5),
-            rgba(0, 0, 0, 0.5)
-            ),
-        url(./assets/mapleShipBackground.jpg) no-repeat center;
-    background-size: cover;
+    background: #0F141A;
 }
 
-.backgroundContainer {
+.headerContent {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
     height: 100vh;
-    background: 
-        url(./assets/explorers.png) no-repeat 105%, 
-        url(./assets/maplestoryLogo.png)  no-repeat 0% 20%;
-    
+}
+
+h1 {
+    color: white;
+    font-size: 4rem;
+}
+
+.backgroundImage img {
+    max-width: 100%;
 }
 
 .information {
@@ -124,4 +129,13 @@ header {
     justify-content: center;
     flex-wrap: wrap;
     gap: 40px;
+}
+
+.pastCharactersSection {
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.6)),
+        url(./assets/templeOfTimeBackground.jpg) no-repeat center;
+    background-size: cover;
+    padding: 100px 0 100px 0;
 }
