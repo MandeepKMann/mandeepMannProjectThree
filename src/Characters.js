@@ -1,4 +1,3 @@
-import { Fragment } from "react";
 // import warriors from "./warriors.js";
 
 const Characters = ({characterList}) => {
