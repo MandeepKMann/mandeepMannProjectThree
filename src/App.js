@@ -28,29 +28,49 @@ function App() {
 
     }
     
+    const checkSpecialChar = (string) => {
+        const specialChars = /[ `!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
+        return specialChars.test(string)
+    }
+
+
 
     const handleSubmit = (e) => {
         e.preventDefault();
         
-        const database = getDatabase(app);
-        const dbRef = ref(database);
+        if (checkSpecialChar(userInput.userCharName) === true) {
 
-        push(dbRef, userInput);
-
-        setUserInput({
-            userSelection: "",
-            userCharName: ""
-        })
-       
-        Swal.fire({
-            icon: 'success',
-            text: 'Your character has been created!',
-            background: '#0F141A',
-            color: 'white',
-            borderRadius: '1',
-            showConfirmButton: false,
-            timer: 2500
-        })
+            Swal.fire({
+                icon: 'warning',
+                text: 'Your character name can only contain letters and numbers!',
+                background: '#0F141A',
+                color: 'white',
+                borderRadius: '1',
+                showConfirmButton: false,
+                timer: 3000
+            })
+        } else if (checkSpecialChar(userInput.userCharName) === false) {
+            
+            const database = getDatabase(app);
+            const dbRef = ref(database);
+            
+            push(dbRef, userInput);
+            
+            setUserInput({
+                userSelection: "",
+                userCharName: ""
+            })
+           
+            Swal.fire({
+                icon: 'success',
+                text: 'Your character has been created!',
+                background: '#0F141A',
+                color: 'white',
+                borderRadius: '1',
+                showConfirmButton: false,
+                timer: 3000
+            })
+        }
     }
     
 
@@ -67,10 +87,11 @@ function App() {
             const dataArray = []
             jaggedArray.forEach(([key, value]) => {
                 dataArray.push(value)
+                console.log(key)
                     // push the key from the jaggedArray into the dataArray 
-                    dataArray.forEach((object) => {
-                        object.key = key
-                    })
+                    // dataArray.forEach((object) => {
+                    //     object.key = key
+                    // })
             })
 
             // push the dataArray into the characterList stateful variable
@@ -88,7 +109,9 @@ function App() {
             </header>
 
             <main>
+                
                 <Divider />
+                
                 <section className='information'>
                     <div className="wrapper">
                         <h2 className='infoTitle'>Path of the Warrior</h2>
@@ -106,10 +129,17 @@ function App() {
                         userInput={userInput}
                         handleSubmit={handleSubmit}
                     />
-                    <Characters
-                        data={characterList}
-                    />
 
+                </section>
+
+                <Divider />
+                
+                <section>
+                    <ul>
+                        <Characters
+                            characterList={characterList}
+                        />
+                    </ul>
                 </section>
     
             </main>

@@ -15,7 +15,7 @@ const WarriorList = () => {
                     <p className="subClassDescription">{subClass.description}</p>
 
                     <div className="imageContainer">
-                        <img classname="subClassImg" src={subClass.urlName} alt={`A cute little ${subClass.class}`} />
+                        <img className="subClassImg" src={subClass.urlName} alt={`A cute little ${subClass.class}`} />
                     </div>
 
                     {/* Skill Info */}

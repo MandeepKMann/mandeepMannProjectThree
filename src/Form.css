@@ -78,7 +78,7 @@ select {
     font-weight: bold;
     background: url(./assets/chevronDown.png) no-repeat right #24222D;
     appearance: none;
-    background-position-x: 1020px;
+    background-position-x: 98%;
 }
 
 select:hover,
