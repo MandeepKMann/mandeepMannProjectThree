@@ -3,23 +3,23 @@ import { Fragment } from "react";
 
 const Characters = ({characterList}) => {
     console.log(characterList)
-    return (
-        <Fragment>
-            {characterList.map((prevCharacter) => {
+    // return (
+    //     <Fragment>
+    //         {characterList.map((prevCharacter) => {
         
-                return (
-                    <li key={prevCharacter.key}>
-                        <p>{prevCharacter.character.userCharName}</p>
-                        <img src='' alt={`A ${prevCharacter.character.userSelection}`} />
-                        <ul>
-                            <li>Class: {prevCharacter.character.userSelection}</li>
-                        </ul>
-                    </li>
-                )
-            })}
-        </Fragment>
+    //             return (
+    //                 <li key={prevCharacter.key}>
+    //                     <p>{prevCharacter.character.userCharName}</p>
+    //                     <img src='' alt={`A ${prevCharacter.character.userSelection}`} />
+    //                     <ul>
+    //                         <li>Class: {prevCharacter.character.userSelection}</li>
+    //                     </ul>
+    //                 </li>
+    //             )
+    //         })}
+    //     </Fragment>
 
-    )
+    // )
 
 }
 
