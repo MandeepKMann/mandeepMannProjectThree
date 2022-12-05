@@ -8,7 +8,7 @@ import Swal from 'sweetalert2'
 // Sections
 import WarriorInfo from './WarriorInfo.js';
 import Form from './Form.js';
-import Characters from './Characters.js';
+import {Characters, CharacterInfo} from './Characters.js';
 import Divider from './Divider.js';
 import Header from './Header.js';
 
@@ -131,69 +131,3 @@ function App() {
 }
 
 export default App;
-
-
-
-// const Form = ({handleChange, userInput, handleSubmit}) => {
-//     return (
-//         <form onSubmit={handleSubmit}>
-//             <label htmlFor="userSelection"></label>
-//             <select 
-//                 onChange={handleChange}
-//                 name="userSelection" 
-//                 id="userSelection"
-//                 value={userInput}
-//             >
-//                 <option value="" disabled>Pick a Subclass</option>
-//                 <option value="Hero">Hero</option>
-//                 <option value="Paladin">Paladin</option>
-//                 <option value="Dark Knight">Dark Knight</option>
-//             </select>
-
-//             <label htmlFor="userCharName"></label>
-//             <input
-//                 name="userCharName"
-//                 onChange={handleChange} 
-//                 type="text"
-//                 id="userCharName"
-//                 value={userInput}
-//              />
-
-//              <button type="submit">hi i'm a button~</button>
-//         </form>
-//     )
-// }
-
-// export default Form;
-
-// const Form = ({handleChange, userTextInput, userSelectInput, handleSubmit}) => {
-//     return (
-//         <form onSubmit={handleSubmit}>
-//             <label htmlFor="userSelection"></label>
-//             <select 
-//                 onChange={handleChange}
-//                 name="userSelection" 
-//                 id="userSelection"
-//                 value={userSelectInput}
-//             >
-//                 <option value="" disabled>Pick a Subclass</option>
-//                 <option value="Hero">Hero</option>
-//                 <option value="Paladin">Paladin</option>
-//                 <option value="Dark Knight">Dark Knight</option>
-//             </select>
-
-//             <label htmlFor="userCharName"></label>
-//             <input
-//                 name="userCharName"
-//                 onChange={handleChange} 
-//                 type="text"
-//                 id="userCharName"
-//                 value={userTextInput}
-//              />
-
-//              <button type="submit">hi i'm a button~</button>
-//         </form>
-//     )
-// }
-
-// export default Form;

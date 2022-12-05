@@ -14,7 +14,7 @@ const WarriorInfo = () => {
                     <p>What do you think? Are you ready for a second path?</p>
                     <ul className='warriorsInfo'>
                         {warriors.map((subClass) => {
-                            return(
+                            return (
 
                             <li key={subClass.id} className="subClassInfo">
                                 {/* Subclass Info */}

@@ -11,8 +11,9 @@ const warriors = [
     {
     id: 1,
     class: "Hero",
-    url: "./assets/warriorsAssets/hero.png",
+    // url: "./assets/warriorsAssets/hero.png",
     urlName: heroImg,
+    urlString: "heroImg",
     avatar: 
         [
         "./assets/warriorAssets/heroAvatarOne.png",
@@ -23,7 +24,7 @@ const warriors = [
     mainAttack:
             {
             skillName: "Raging Blow",
-            url: "./assets/warriorAssets/ragingBlowIcon.png",
+            // url: "./assets/warriorAssets/ragingBlowIcon.png",
             urlName: ragingBlow,
             effect: "assets/warriors/ragingBlowEffect.gif",
             description: "Attack multiple enemies in front of you multiple times in a row. The last attack will be a critical hit. When your Combo is fully charged, the skill is enhanced. In addition, enhances Aura Blade."
@@ -32,8 +33,9 @@ const warriors = [
     {
     id: 2,
     class: "Paladin",
-    url: "./assets/warriorAssets/paladin.png",
+    // url: "./assets/warriorAssets/paladin.png",
     urlName: paladinImg,
+    urlString: "paladinImg",
     avatar: 
         [
         "./assets/warriorAssets/paladinAvatarOne.png",
@@ -44,7 +46,7 @@ const warriors = [
     mainAttack:
             {
             skillName: "Divine Stigma",
-            url: "./assets/warriors/divineStigmaIcon.png",
+            // url: "./assets/warriors/divineStigmaIcon.png",
             urlName: divineStigma,
             effect: "./assets/warriors/divineStigmaEffect.gif",
             description: "Summon a more powerful divine hammer. Divine Charge's damage and range are increased, and Divine Stigma can be used at certain intervals. When Divine Stigma is used, a stigma of light is engraved at the location of the attack, and after a certain period of time, the stigma explodes to attack enemies in a wide range. Party members bonded with Holy Unity will not activate the stigma explosion."
@@ -53,8 +55,9 @@ const warriors = [
     {
     id: 3,
     class: "Dark Knight",
-    url: "./assets/warriorAssets/darkKnight.png",
+    // url: "./assets/warriorAssets/darkKnight.png",
     urlName: darkKnightImg,
+    urlString: "darkKnightImg",
     avatar: 
         [
         "./assets/warriorAssets/darkKnightAvatarOne.png",
@@ -65,7 +68,7 @@ const warriors = [
     mainAttack:
             {
             skillName: "Dark Impale",
-            url: "./assets/warriorAssets/darkImpaleIcon.png",
+            // url: "./assets/warriorAssets/darkImpaleIcon.png",
             urlName: darkImpale,
             effect: "./assets/warriors/darkImpaleEffect.gif",
             description: "Stab your spear quickly enough to be invisible to attack multiple enemies in front of you."

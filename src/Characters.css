@@ -1,0 +1,24 @@
+.pastCharList {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 0px;
+    gap: 20px;
+    justify-content: space-evenly;
+}
+
+.pastChar {
+    border: 2px solid black;
+    border-radius: 1%;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+}
+
+.pastChar p,
+.pastChar li,
+.pastChar img {
+    color: white;
+}
+
+.pastCharInfo {
+    padding-left: 0px;
+}
