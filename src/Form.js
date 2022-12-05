@@ -1,3 +1,4 @@
+import { Fragment } from "react"
 import "./Form.css"
 
 const Form = ({handleChange, userInput, handleSubmit}) => {
@@ -7,36 +8,41 @@ const Form = ({handleChange, userInput, handleSubmit}) => {
     const userTextInput = userInput.userCharName
 
     return (
-        <div className="formContainer">
-            <h2>Create Your Warrior</h2>
-            <form className="form" onSubmit={handleSubmit}>
-                <label htmlFor="userSelection">Select Your Subclass:</label>
-                <select 
-                    onChange={handleChange}
-                    name="userSelection" 
-                    id="userSelection"
-                    value={userSelectInput}
-                    required
-                >
-                    <option value="" disabled>Select One</option>
-                    <option value="Hero">Hero</option>
-                    <option value="Paladin">Paladin</option>
-                    <option value="Dark Knight">Dark Knight</option>
-                </select>
+        <Fragment>
+            <section className="formSection">
+                <div className="formContainer">
+                    <h2>Create Your Warrior</h2>
+                    <form className="form" onSubmit={handleSubmit}>
+                        <label htmlFor="userSelection">Select Your Subclass:</label>
+                        <select 
+                            onChange={handleChange}
+                            name="userSelection" 
+                            id="userSelection"
+                            value={userSelectInput}
+                            required
+                        >
+                            <option value="" disabled>Select One</option>
+                            <option value="Hero">Hero</option>
+                            <option value="Paladin">Paladin</option>
+                            <option value="Dark Knight">Dark Knight</option>
+                        </select>
 
-                <label htmlFor="userCharName">Character Name:</label>
-                <input
-                    name="userCharName"
-                    onChange={handleChange} 
-                    type="text"
-                    id="userCharName"
-                    value={userTextInput}
-                    required
-                />
+                        <label htmlFor="userCharName">Character Name:</label>
+                        <input
+                            name="userCharName"
+                            onChange={handleChange} 
+                            type="text"
+                            id="userCharName"
+                            value={userTextInput}
+                            required
+                        />
 
-                <button type="submit">Create Character</button>
-            </form>
-        </div>
+                        <button type="submit">Create Character</button>
+                    </form>
+                </div>
+            </section>
+
+        </Fragment>
     )
 }
 

@@ -6,7 +6,7 @@ import app from './firebase.js'
 import Swal from 'sweetalert2'
 
 // Sections
-import WarriorList from './WarriorList.js';
+import WarriorInfo from './WarriorInfo.js';
 import Form from './Form.js';
 import Characters from './Characters.js';
 import Divider from './Divider.js';
@@ -22,7 +22,7 @@ function App() {
         userCharName: ""
     })
 
-    const [characterList, setCharacterList] = useState({})
+    const [characterList, setCharacterList] = useState([])
 
 // https://www.youtube.com/watch?v=-KBS93RlUCY
     const handleChange = (e) => {
@@ -84,7 +84,7 @@ function App() {
 
     useEffect( () => {
         const database = getDatabase(app);
-        const dbRef = ref(database, );
+        const dbRef = ref(database);
 
         onValue(dbRef, (response) => {
             const data = response.val()
@@ -97,49 +97,34 @@ function App() {
 
             // push the dataArray into the characterList stateful variable
             setCharacterList(dataArray)
-
         })
     }, [] )
 
     return (
         <Fragment>
+
             <Header />
 
             <main>
-                
                 <Divider />
-                
-                <section className='information'>
-                    <div className="wrapper">
-                        <WarriorList />
-                    </div>
-                </section>
 
-               <Divider />
+                <WarriorInfo />
 
-                <section className='formSection'>
-                    <Form
-                        handleChange={handleChange}
-                        userInput={userInput}
-                        handleSubmit={handleSubmit}
-                    />
+                <Divider />
 
-                </section>
+                <Form
+                    handleChange={handleChange}
+                    userInput={userInput}
+                    handleSubmit={handleSubmit}
+                />
 
                 <Divider />
                 
-                <section className='pastCharactersSection'>
-                    <ul>
-                        <Characters
-                            characterList={characterList}
-                        />
-                    </ul>
-                </section>
-    
+                <Characters
+                    characterList={characterList}
+                />
+                    
             </main>
-
-
-
 
         </Fragment>
     );
