@@ -29,7 +29,7 @@ function App() {
     }
     
     const checkSpecialChar = (string) => {
-        const specialChars = /[ `!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
+        const specialChars = (/[ `!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/);
         return specialChars.test(string)
     }
 
