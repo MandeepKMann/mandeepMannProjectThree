@@ -76,23 +76,16 @@ function App() {
 
     useEffect( () => {
         const database = getDatabase(app);
-        const dbRef = ref(database);
+        const dbRef = ref(database, );
 
         onValue(dbRef, (response) => {
             const data = response.val()
-            // convert the value of the object into an array with arrays
-            const jaggedArray = Object.entries(data);
-      
-            // destructure that array to separate the key and value and push the value into the new dataArray
+
+            // use the database key as key for each object
             const dataArray = []
-            jaggedArray.forEach(([key, value]) => {
-                dataArray.push(value)
-                console.log(key)
-                    // push the key from the jaggedArray into the dataArray 
-                    // dataArray.forEach((object) => {
-                    //     object.key = key
-                    // })
-            })
+            for (let key in data) {
+                dataArray.push({key: key, character:data[key]})
+            }
 
             // push the dataArray into the characterList stateful variable
             setCharacterList(dataArray)
