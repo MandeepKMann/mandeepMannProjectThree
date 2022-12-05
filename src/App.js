@@ -29,6 +29,7 @@ function App() {
     }
     
     const checkSpecialChar = (string) => {
+        // eslint-disable-next-line
         const specialChars = (/[ `!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/);
         return specialChars.test(string)
     }
