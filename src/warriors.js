@@ -1,11 +1,14 @@
 import heroImg from "./assets/warriorsAssets/hero.png"
 import ragingBlow from "./assets/warriorsAssets/ragingBlowIcon.png"
+import ragingBlowEffect from "./assets/warriorsAssets/ragingBlowEffect.gif"
 
 import paladinImg from "./assets/warriorsAssets/paladin.png"
 import divineStigma from "./assets/warriorsAssets/divineStigmaIcon.png"
+import divineStigmaEffect from "./assets/warriorsAssets/divineStigmaEffect.gif"
 
 import darkKnightImg from "./assets/warriorsAssets/darkKnight.png"
 import darkImpale from "./assets/warriorsAssets/darkImpaleIcon.png"
+import darkImpaleEffect from "./assets/warriorsAssets/darkImpaleEffect.gif"
 
 const warriors = [
     {
@@ -27,6 +30,7 @@ const warriors = [
             // url: "./assets/warriorAssets/ragingBlowIcon.png",
             urlName: ragingBlow,
             effect: "assets/warriors/ragingBlowEffect.gif",
+            effectName: ragingBlowEffect,
             description: "Attack multiple enemies in front of you multiple times in a row. The last attack will be a critical hit. When your Combo is fully charged, the skill is enhanced. In addition, enhances Aura Blade."
             }
     },
@@ -49,6 +53,7 @@ const warriors = [
             // url: "./assets/warriors/divineStigmaIcon.png",
             urlName: divineStigma,
             effect: "./assets/warriors/divineStigmaEffect.gif",
+            effectName: divineStigmaEffect,
             description: "Summon a more powerful divine hammer. Divine Charge's damage and range are increased, and Divine Stigma can be used at certain intervals. When Divine Stigma is used, a stigma of light is engraved at the location of the attack, and after a certain period of time, the stigma explodes to attack enemies in a wide range. Party members bonded with Holy Unity will not activate the stigma explosion."
             }  
     },
@@ -71,6 +76,7 @@ const warriors = [
             // url: "./assets/warriorAssets/darkImpaleIcon.png",
             urlName: darkImpale,
             effect: "./assets/warriors/darkImpaleEffect.gif",
+            effectName: darkImpaleEffect,
             description: "Stab your spear quickly enough to be invisible to attack multiple enemies in front of you."
             }  
     }

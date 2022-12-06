@@ -3,7 +3,9 @@
     flex-wrap: wrap;
     margin-left: 0px;
     gap: 20px;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+    flex-wrap: wrap-reverse;
 }
 
 .pastChar {
@@ -11,6 +13,20 @@
     border-radius: 1%;
     background-color: rgba(0, 0, 0, 0.7);
     padding: 20px;
+    width: calc((100% / 3) - 60px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.charIGN {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.pastCharImg {
+    width: 50%;
 }
 
 .pastChar p,

@@ -8,7 +8,7 @@ import Swal from 'sweetalert2'
 // Sections
 import WarriorInfo from './WarriorInfo.js';
 import Form from './Form.js';
-import {Characters, CharacterInfo} from './Characters.js';
+import Characters from './Characters.js';
 import Divider from './Divider.js';
 import Header from './Header.js';
 

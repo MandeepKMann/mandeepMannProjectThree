@@ -1,21 +1,8 @@
 import { Fragment } from "react";
 import './Characters.css'
 import warriors from "./warriors.js";
-import snail from "./assets/snail.png";
-
-// import heroImg from "./assets/warriorsAssets/hero.png"
-// import ragingBlow from "./assets/warriorsAssets/ragingBlowIcon.png"
-
-// import paladinImg from "./assets/warriorsAssets/paladin.png"
-// import divineStigma from "./assets/warriorsAssets/divineStigmaIcon.png"
-
-// import darkKnightImg from "./assets/warriorsAssets/darkKnight.png"
-// import darkImpale from "./assets/warriorsAssets/darkImpaleIcon.png"
-
-
 
 const Characters = ({characterList}) => {
-    // console.log(characterList)
     return (
         <Fragment>
             <section className="pastCharactersSection">
@@ -24,59 +11,24 @@ const Characters = ({characterList}) => {
                     {characterList.map((prevCharacter) => {
                         return (
                             <li key={prevCharacter.key} className="pastChar">
-                                <p>{prevCharacter.character.userCharName}</p>
-                                
-
-                                {/* {characterImg = 
-                                    prevCharacter.userSelection === "Hero" ? heroImg :  
-                                    prevCharacter.userSelection === "Paladin" ? paladinImg :
-                                    prevCharacter.userSelection === "Dark Knight" ? darkKnightImg
-                                } */}
-                                
-                                {/* {warriors.forEach(subClass => {
-                                    if (subClass.class = prevCharacter.character.userSelection) {
-                                        console.log(true)
-                                        return (
-                                        <img src={subClass.urlName} alt={`A cute little ${subClass.class}`} />
-                                        ) 
-                                    } 
-                                    else {
-                                        console.log(false)
-                                        return (
-                                            <img src={snail} alt={`A ${prevCharacter.character.userSelection}`}></img>
-                                        )
-                                    }
-                                })} */}
+                                <p className="charIGN">{prevCharacter.character.userCharName}</p>
                         
                                 {warriors.map((subClass) => {
-
-                                    console.log(prevCharacter.character.userSelection)
-                                    console.log(subClass.class)
-                                    // console.log(subClass.urlName)
                                     if (subClass.class === prevCharacter.character.userSelection) {
-                                        console.log(true)
-                                        return (
-                                            <Fragment>
-                                                <img src={subClass.urlName} alt={`A cute little ${subClass.class}`} />
-                                                <p>Class: {prevCharacter.character.userSelection}</p>
-                                            </Fragment>
-                                            
-                                        ) 
+                                    return (
+                                        <Fragment>
+                                            <img src={subClass.urlName} alt={`A cute little ${subClass.class}`} className="pastCharImg"/>
+                                            <p>Class: {prevCharacter.character.userSelection}</p>
+                                            <div className="skillContainer">
+                                                <img src={subClass.mainAttack.urlName} alt={`Icon for ${subClass.mainAttack.skillName} skill`} />
+                                                <h4>{subClass.mainAttack.skillName}</h4>
+                                            </div>
+                                        </Fragment>
+                                    ) 
                                     } 
-                                    // else {
-                                    //     console.log(false)
-                                    //     return (
-                                    //         <img src={snail} alt={`A ${prevCharacter.character.userSelection}`}></img>
-                                    //     )
-                                    // }
+                                    
                                 })}
                                 
-                                {/* <ul className="pastCharInfo">
-                                    <li>
-                                        <p>Class: {prevCharacter.character.userSelection}</p>
-                                        <p>Skill: blah blah blah</p>
-                                    </li>
-                                </ul> */}
                             </li>
                         )
                     })}
@@ -88,26 +40,4 @@ const Characters = ({characterList}) => {
     )
 }
 
-const CharacterInfo = () => {
-    // warriors.map((subClass) => {
-
-    //     console.log(prevCharacter.character.userSelection)
-    //     // console.log(subClass.urlName)
-    //     if (subClass.class = prevCharacter.character.userSelection) {
-    //         console.log(true)
-    //         return (
-    //                 <img src={subClass.urlName} alt={`A cute little ${subClass.class}`} />
-    //         ) 
-    //     } 
-    //     else {
-    //         console.log(false)
-    //         return (
-    //             <img src={snail} alt={`A cute little ${subClass.class}`}></img>
-    //         )
-    //     }
-    // })
-}
-
-// PastCharacters()
-
-export {Characters, CharacterInfo};
+export default Characters;
