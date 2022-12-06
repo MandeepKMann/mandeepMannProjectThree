@@ -31,7 +31,7 @@ const warriors = [
             urlName: ragingBlow,
             effect: "assets/warriors/ragingBlowEffect.gif",
             effectName: ragingBlowEffect,
-            description: "Attack multiple enemies in front of you multiple times in a row. The last attack will be a critical hit. When your Combo is fully charged, the skill is enhanced. In addition, enhances Aura Blade."
+            description: "Attack multiple enemies in front of you multiple times in a row. The last attack will be a critical hit. When your Combo is fully charged, the skill is enhanced."
             }
     },
     {
@@ -54,7 +54,7 @@ const warriors = [
             urlName: divineStigma,
             effect: "./assets/warriors/divineStigmaEffect.gif",
             effectName: divineStigmaEffect,
-            description: "Summon a more powerful divine hammer. Divine Charge's damage and range are increased, and Divine Stigma can be used at certain intervals. When Divine Stigma is used, a stigma of light is engraved at the location of the attack, and after a certain period of time, the stigma explodes to attack enemies in a wide range. Party members bonded with Holy Unity will not activate the stigma explosion."
+            description: "Summon a more powerful divine hammer. When Divine Stigma is used, a stigma of light is engraved at the location of the attack, and after a certain period of time, the stigma explodes to attack enemies in a wide range."
             }  
     },
     {

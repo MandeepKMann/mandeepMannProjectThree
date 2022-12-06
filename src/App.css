@@ -79,58 +79,6 @@ p {
     align-items: center;
 }
 
-h1 {
-    text-align: center;
-}
-
-header {
-    height: 100vh;
-    background: #0F141A;
-}
-
-.headerContent {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    height: 100vh;
-}
-
-h1 {
-    color: white;
-    font-size: 4rem;
-}
-
-.backgroundImage img {
-    max-width: 100%;
-}
-
-.information {
-    background: 
-        linear-gradient(
-            rgba(0, 0, 0, 0.6),
-            rgba(0, 0, 0, 0.6)
-            ),
-        url(./assets/perionBackground.jpg) no-repeat center;
-    background-size: cover;
-    padding: 100px 0 100px 0;
-}
-
-.infoTitle {
-    margin-top: 0px;
-    margin-bottom: 100px;
-    font-size: 3rem;
-}
-
-.warriorsInfo {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 40px;
-}
-
 .pastCharactersSection {
     background:
         linear-gradient(rgba(0, 0, 0, 0.6),

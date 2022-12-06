@@ -1,5 +1,6 @@
-import { Fragment, useEffect, useState } from 'react';
+import { Fragment, useEffect, useState, useRef } from 'react';
 import { getDatabase, ref, push, onValue } from 'firebase/database';
+import { Route, Routes } from 'react-router-dom';
 
 // Installed
 import app from './firebase.js'
@@ -100,6 +101,14 @@ function App() {
         })
     }, [] )
 
+    // const scrollDown = (ref) => {
+    //     window.scrollTo({
+    //         top: ref.current.offsetTop,
+    //         behavior: 'smooth',
+    //     })
+    // }
+
+
     return (
         <Fragment>
 
@@ -108,7 +117,8 @@ function App() {
             <main>
                 <Divider />
 
-                <WarriorInfo />
+
+                <WarriorInfo/>
 
                 <Divider />
 
