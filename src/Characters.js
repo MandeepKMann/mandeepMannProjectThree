@@ -26,7 +26,7 @@ const Characters = ({characterList}) => {
                                         </Fragment>
                                     ) 
                                 } 
-                                
+                                null
                             })}
                             
                         </li>
