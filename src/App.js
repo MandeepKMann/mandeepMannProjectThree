@@ -1,6 +1,5 @@
-import { Fragment, useEffect, useState, useRef } from 'react';
+import { Fragment, useEffect, useState } from 'react';
 import { getDatabase, ref, push, onValue } from 'firebase/database';
-import { Route, Routes } from 'react-router-dom';
 
 // Installed
 import app from './firebase.js'
@@ -12,6 +11,7 @@ import Form from './Form.js';
 import Characters from './Characters.js';
 import Divider from './Divider.js';
 import Header from './Header.js';
+import BackToTopButton from './BackToTopButton.js';
 
 // CSS
 import './App.css';
@@ -101,14 +101,6 @@ function App() {
         })
     }, [] )
 
-    // const scrollDown = (ref) => {
-    //     window.scrollTo({
-    //         top: ref.current.offsetTop,
-    //         behavior: 'smooth',
-    //     })
-    // }
-
-
     return (
         <Fragment>
 
@@ -135,7 +127,7 @@ function App() {
                 />
                     
             </main>
-
+                <BackToTopButton />
         </Fragment>
     );
 }

@@ -1,20 +1,20 @@
-import { Fragment } from "react";
+import { Fragment } from 'react';
 import './Characters.css'
 import warriors from "./warriors.js";
 
 const Characters = ({characterList}) => {
     return (
-        <Fragment>
-            <section className="pastCharactersSection">
-                <div className="wrapper">
-                    <ul className="pastCharList">
-                    {characterList.map((prevCharacter) => {
-                        return (
-                            <li key={prevCharacter.key} className="pastChar">
-                                <p className="charIGN">{prevCharacter.character.userCharName}</p>
-                        
-                                {warriors.map((subClass) => {
-                                    if (subClass.class === prevCharacter.character.userSelection) {
+        <section className="pastCharactersSection">
+            <div className="wrapper">
+                <ul className="pastCharList">
+                {characterList.map((prevCharacter) => {
+                // console.log(prevCharacter.key)
+                    return (
+                        <li key={prevCharacter.key} className="pastChar">
+                            <p className="charIGN">{prevCharacter.character.userCharName}</p>
+                    
+                            {warriors.map((subClass) => {
+                                if (subClass.class === prevCharacter.character.userSelection) {
                                     return (
                                         <Fragment>
                                             <img src={subClass.urlName} alt={`A cute little ${subClass.class}`} className="pastCharImg"/>
@@ -25,17 +25,16 @@ const Characters = ({characterList}) => {
                                             </div>
                                         </Fragment>
                                     ) 
-                                    } 
-                                    
-                                })}
+                                } 
                                 
-                            </li>
-                        )
-                    })}
-                    </ul>
-                </div>
-            </section>
-        </Fragment>
+                            })}
+                            
+                        </li>
+                    )
+                })}
+                </ul>
+            </div>
+        </section>
 
     )
 }

@@ -2,7 +2,9 @@ import './Header.css';
 
 import explorers from './assets/explorers.png';
 
+
 const Header = () => {
+
     return (
         <header>
                 <div className="wrapper">
@@ -19,7 +21,12 @@ const Header = () => {
                                 <img src={explorers} alt="Five explorers with different classes (mage, thief, pirate, warrior, archer)" />
                             </div>
                         </div>
-                        <button className='scrollDown'>I'm Ready</button>
+                        <button 
+                        className='scrollDown'
+
+                        >
+                            I'm Ready
+                        </button>
 
                     </div>
                 </div>

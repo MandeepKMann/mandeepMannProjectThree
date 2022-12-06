@@ -7,7 +7,8 @@ import divineStigma from "./assets/warriorsAssets/divineStigmaIcon.png"
 import darkKnightImg from "./assets/warriorsAssets/darkKnight.png"
 import darkImpale from "./assets/warriorsAssets/darkImpaleIcon.png"
 
-const warriors = {
+const warriorsObjectTest = {
+    // subClasses: {
         hero: {
             id: 1,
             name: "Hero",
@@ -65,6 +66,7 @@ const warriors = {
                     two: "./assets/warriorAssets/darkKnightAvatarTwo.png"
             }  
         }
+    // }
 };
 
-export default warriors;
+export default warriorsObjectTest;
