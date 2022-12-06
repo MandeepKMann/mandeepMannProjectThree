@@ -12,7 +12,7 @@ const Characters = ({characterList}) => {
                     return (
                         <li key={prevCharacter.key} className="pastChar">
                             <p className="charIGN">{prevCharacter.character.userCharName}</p>
-                    
+                            {/* eslint-disable-next-line */}
                             {warriors.map((subClass) => {
                                 if (subClass.class === prevCharacter.character.userSelection) {
                                     return (
@@ -26,7 +26,6 @@ const Characters = ({characterList}) => {
                                         </Fragment>
                                     ) 
                                 } 
-                                null
                             })}
                             
                         </li>
