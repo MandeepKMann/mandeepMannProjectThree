@@ -120,7 +120,7 @@ function App() {
                     element={ <Characters
                         characterList={characterList}
                     /> } />
-                <Route path="*" element={ <Error />} />
+                <Route path="/Error" element={ <Error />} />
             </Routes>
 
             {/* <main>
