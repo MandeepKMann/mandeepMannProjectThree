@@ -25,8 +25,8 @@ const Header = () => {
                     </div>{/* END .headerContent */}
                         
                     {/* Link to WarrioInfo.js */}
-                    <Link to="warriorsinfo">
-                        <button>I'm Ready</button>
+                    <Link to="warriorsinfo" className='routerLink headerLink'>
+                        I'm Ready
                     </Link>
                 </div>{/* END .headerFlex */}
             </div>
