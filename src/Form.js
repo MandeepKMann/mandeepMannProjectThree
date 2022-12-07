@@ -1,5 +1,6 @@
 import { Fragment } from "react"
 import "./Form.css"
+import { Link } from "react-router-dom"
 
 const Form = ({handleChange, userInput, handleSubmit}) => {
 
@@ -10,6 +11,14 @@ const Form = ({handleChange, userInput, handleSubmit}) => {
     return (
         <Fragment>
             <section className="formSection">
+                <div className="routerButton">
+                <Link to="/warriorsinfo">
+                    <button>BACK</button>
+                </Link>
+                <Link to="characters">
+                    <button>View Characters</button>
+                </Link>
+                </div>
                 <div className="wrapper formFlex">
                     <div className="formContainer">
                         <h2>Create Your Warrior</h2>

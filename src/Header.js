@@ -1,4 +1,6 @@
 import './Header.css';
+import { Link } from 'react-router-dom';
+
 
 import explorers from './assets/explorers.png';
 
@@ -21,13 +23,10 @@ const Header = () => {
                                 <img src={explorers} alt="Five explorers with different classes (mage, thief, pirate, warrior, archer)" />
                             </div>
                         </div>
-                        <button 
-                        className='scrollDown'
 
-                        >
-                            I'm Ready
-                        </button>
-
+                        <Link to="warriorsinfo">
+                            <button>I'm Ready</button>
+                        </Link>
                     </div>
                 </div>
             </header>

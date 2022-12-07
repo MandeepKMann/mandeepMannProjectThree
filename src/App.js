@@ -1,6 +1,6 @@
 import { Fragment, useEffect, useState } from 'react';
 import { getDatabase, ref, push, onValue } from 'firebase/database';
-
+import { Routes, Route } from 'react-router-dom';
 // Installed
 import app from './firebase.js'
 import Swal from 'sweetalert2'
@@ -104,9 +104,24 @@ function App() {
     return (
         <Fragment>
 
-            <Header />
+            <Routes>
+                <Route path="/" element={ <Header /> } />
+                <Route path="/warriorsinfo" element={ <WarriorInfo /> } /> 
+                <Route 
+                    path="/warriorsinfo/form" 
+                    element={ <Form
+                        handleChange={handleChange}
+                        userInput={userInput}
+                        handleSubmit={handleSubmit}
+                    /> } />
+                <Route 
+                    path="/warriorsinfo/form/characters" 
+                    element={ <Characters
+                        characterList={characterList}
+                    /> } />
+            </Routes>
 
-            <main>
+            {/* <main>
                 <Divider />
 
 
@@ -127,7 +142,7 @@ function App() {
                 />
                     
             </main>
-                <BackToTopButton />
+                <BackToTopButton /> */}
         </Fragment>
     );
 }

@@ -1,11 +1,16 @@
 import warriors from "./warriors.js";
 import "./WarriorInfo.css"
-import { forwardRef } from "react";
+import { Routes, Route, Link } from "react-router-dom";
+import BackToTopButton from "./BackToTopButton.js";
+import Form from "./Form.js";
 
 const WarriorInfo = () => {
     return (
         <section className="information">
             <div className="wrapper">
+            <Link to="/">
+                <button>BACK</button>
+            </Link>
                 <div className="info">
                     <h2 className='infoTitle'>The Three Ways of the Warrior</h2>
                     <p>I feel an unusual energy from you. I know that you've only recently become a Warrior. How did you become so strong in such a short time?</p>
@@ -36,9 +41,14 @@ const WarriorInfo = () => {
                         )
                     })}
                 </ul>
+            <Link to="form">
+                <button>I'm Ready</button>
+            </Link>
+
             </div>
+        <BackToTopButton />
         </section>
     )
 }
 
-export default forwardRef(WarriorInfo);
+export default WarriorInfo;

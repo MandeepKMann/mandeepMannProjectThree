@@ -1,11 +1,16 @@
 import { Fragment } from 'react';
 import './Characters.css'
 import warriors from "./warriors.js";
+import BackToTopButton from './BackToTopButton.js';
+import { Link } from 'react-router-dom';
 
 const Characters = ({characterList}) => {
     return (
         <section className="pastCharactersSection">
             <div className="wrapper">
+            <Link to="/warriorsinfo/form">
+                <button>BACK</button>
+            </Link>
                 <ul className="pastCharList">
                 {characterList.map((prevCharacter) => {
                 // console.log(prevCharacter.key)
@@ -33,6 +38,7 @@ const Characters = ({characterList}) => {
                 })}
                 </ul>
             </div>
+                <BackToTopButton />
         </section>
 
     )
