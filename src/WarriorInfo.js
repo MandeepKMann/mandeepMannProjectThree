@@ -1,8 +1,7 @@
 import warriors from "./warriors.js";
 import "./WarriorInfo.css"
-import { Routes, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import BackToTopButton from "./BackToTopButton.js";
-import Form from "./Form.js";
 
 const WarriorInfo = () => {
     return (
