@@ -1,0 +1,100 @@
+.pastCharList {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 0px;
+    gap: 20px;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+    flex-wrap: wrap-reverse;
+}
+
+.pastChar {
+    border: 2px solid black;
+    border-radius: 1%;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    width: calc((100% / 3) - 60px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.nameOfClass {
+    text-align: center;
+}
+
+.charIGN {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.pastCharImg {
+    width: 80%;
+}
+
+.pastChar p,
+.pastChar li,
+.pastChar img {
+    color: white;
+}
+
+.pastCharInfo {
+    padding-left: 0px;
+}
+
+.pastChar p, 
+.pastChar h4 {
+    margin: 0px;
+}
+
+.skillContainer h4{
+    padding-left: 0px;
+    text-align: center;
+}
+
+.skillContainer {
+    gap: 10px;
+}
+
+.toCreate {
+    width: auto;
+    height: 60px;
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    font-size: 2rem;
+    line-height: 1.3;
+    border-radius: 1%;
+    padding: 10px;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+@media (max-width: 1000px) {
+    .pastCharList {
+        gap: 10px;
+
+    }
+
+    .pastChar {
+        width: calc((100% / 2) - 20px);
+    }
+}
+
+@media (max-width: 600px) {
+    .pastChar {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 500px) {
+    .pastCharList {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .pastChar {
+        width: 100%;
+    }
+}
