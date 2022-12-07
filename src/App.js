@@ -9,9 +9,9 @@ import Swal from 'sweetalert2'
 import WarriorInfo from './WarriorInfo.js';
 import Form from './Form.js';
 import Characters from './Characters.js';
-import Divider from './Divider.js';
+// import Divider from './Divider.js';
 import Header from './Header.js';
-import BackToTopButton from './BackToTopButton.js';
+
 
 // CSS
 import './App.css';
