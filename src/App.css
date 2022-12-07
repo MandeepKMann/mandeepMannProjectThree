@@ -47,6 +47,16 @@ button {
     font-weight: bold;
     text-align: center;
     cursor: pointer;
+    height: 70px;
+    border: 2px solid black;
+    background-color: white;
+}
+
+button:hover,
+button:focus {
+    background-color: #24222D;
+    color: white;
+    border: 2px solid white;
 }
 
 ul {
@@ -63,33 +73,4 @@ p {
     width: 80%;
     margin: 0 auto;
     max-width: 1920px;
-}
-
-.divider {
-    height: 8vh;
-    background-color: #0F141A;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 100px;
-}
-
-.divider i {
-    padding: none;
-    width: fit-content;
-    font-size: 3rem;
-    margin: 0px;
-    color: #616161;
-    display: flex;
-    align-items: center;
-}
-
-.pastCharactersSection {
-    background:
-        linear-gradient(rgba(0, 0, 0, 0.6),
-            rgba(0, 0, 0, 0.6)),
-        url(./assets/templeOfTimeBackground.jpg) no-repeat center;
-    background-size: cover;
-    padding: 100px 0 100px 0;
 }

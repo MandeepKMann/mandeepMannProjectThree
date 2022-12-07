@@ -1,3 +1,12 @@
+.pastCharactersSection {
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.6)),
+        url(./assets/templeOfTimeBackground.jpg) no-repeat center;
+    background-size: cover;
+    padding: 100px 0 100px 0;
+}
+
 .pastCharList {
     display: flex;
     flex-wrap: wrap;

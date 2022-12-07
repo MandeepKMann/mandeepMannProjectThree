@@ -1,16 +1,20 @@
 header {
-    height: 100vh;
     background: #0F141A;
+    padding: 100px 0px 100px 0px;
+    height: 100vh;
+    display: flex;
 }
 
 header button {
-    width: 50%;
+    width: 53%;
 }
 
 .headerFlex {
     display: flex;
     flex-direction: column;
-    padding-top: 2%;
+    gap: 20px;
+    height: 100%;
+    justify-content: center;
 }
 
 .headerContent {
@@ -19,16 +23,17 @@ header button {
     align-items: center;
     flex-direction: row;
     flex-wrap: nowrap;
-    height: 80vh;
 }
 
-.title {
+.headerTitle {
     color: white;
     font-size: 4rem;
     text-align: center;
+    margin-top: 0px;
 }
 
-.backgroundImage img {
+
+.headerImage img {
     max-width: 100%;
 }
 
@@ -36,14 +41,12 @@ header button {
 @media (max-width: 1150px) {
     header {
         display: flex;
-        
         background:
                 linear-gradient(
                     rgba(0, 0, 0, 0.8),
                     rgba(0, 0, 0, 0.8)),
                 url(./assets/explorers.png) no-repeat center,
                 #0F141A;
-            background-size: 50% cover;
     }
     .headerContent {
         flex-direction: column;
@@ -51,45 +54,57 @@ header button {
         justify-content: center;
     }
 
-    .headerContent .textContainer {
+    .headerTextContainer {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    .headerContent p {
+    .headerTextContainer p {
         width: 60%;
     }
 
-    .headerContent img {
+    .headerImage {
         display: none;
     }
 
     header button {
-        width: 50%;
+        width: 60%;
         margin: 0 auto;
     }
 }
 
 @media (max-width: 800px) {
-    .headerContent p {
+    .headerTextContainer p {
         width: 100%;
         text-align: center;
-    }
-}
-
-@media (max-width: 550px) {
-    .headerFlex {
-        padding-top: 20%;
-    }
-    .title {
-        font-size: 2rem;
     }
 
     header button {
         width: 100%;
-        font-size: 1.2rem;
-        line-height: 2.5;
-        margin-top: 10%;
+    }
+}
+
+@media (max-width: 550px) {
+    header {
+        padding: 50px 0px 50px 0px;
+    }
+
+    .headerFlex {
+        gap: 10px;
+    }
+
+    .headerTitle {
+        font-size: 2.5rem;
+        margin: 10px 0px 10px 0px;
+    }
+    
+    .headerTextContainer p {
+        margin: 10px 0px 10px 0px;
+    }
+
+    header button {
+        font-size: 1.3rem;
+        line-height: 2.3;
     }
 }
