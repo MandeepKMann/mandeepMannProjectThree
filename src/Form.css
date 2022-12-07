@@ -13,8 +13,13 @@
     background-size: cover;
 }
 
+.formFlex {
+    display: flex;
+    justify-content: center;
+}
+
 .formContainer {
-    width: 50%;
+    width: 60%;
     padding: 50px;
     display: flex;
     flex-direction: column;
@@ -76,9 +81,9 @@ select {
     background-color: #24222D;
     color: white;
     font-weight: bold;
-    background: url(./assets/chevronDown.png) no-repeat right #24222D;
+    background: url(./assets/smallChevronDown.png) no-repeat right #24222D;
     appearance: none;
-    background-position-x: 98%;
+    background-position-x: 97%;
 }
 
 select:hover,
@@ -90,4 +95,44 @@ label {
     color: white;
     font-weight: bold;
     font-size: 2rem;
+}
+
+
+@media (max-width: 1000px) {
+    .formContainer {
+        width: 100%;
+        padding: 20px;
+    }
+
+
+    .formContainer h2 {
+        font-size: 2rem;
+    }
+
+    label {
+        font-size: 1rem;
+    }
+    
+    .form button {
+        font-size: 1.5rem;
+        line-height: 2;
+
+    }
+}
+
+@media (max-width: 600px) {
+    .formContainer h2 {
+        font-size: 1.5rem;
+    }
+
+    .form button {
+        font-size: 1rem;
+        line-height: 3;
+
+    }
+
+    input,
+    select {
+        font-weight: normal;
+    }
 }

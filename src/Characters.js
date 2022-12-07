@@ -18,7 +18,7 @@ const Characters = ({characterList}) => {
                                     return (
                                         <Fragment>
                                             <img src={subClass.urlName} alt={`A cute little ${subClass.class}`} className="pastCharImg"/>
-                                            <p>Class: {prevCharacter.character.userSelection}</p>
+                                            <p className='nameOfClass'>Class: {prevCharacter.character.userSelection}</p>
                                             <div className="skillContainer">
                                                 <img src={subClass.mainAttack.urlName} alt={`Icon for ${subClass.mainAttack.skillName} skill`} />
                                                 <h4>{subClass.mainAttack.skillName}</h4>

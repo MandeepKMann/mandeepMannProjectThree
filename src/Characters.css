@@ -18,6 +18,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 25px;
+}
+
+.nameOfClass {
+    text-align: center;
 }
 
 .charIGN {
@@ -26,7 +31,7 @@
 }
 
 .pastCharImg {
-    width: 50%;
+    width: 80%;
 }
 
 .pastChar p,
@@ -37,4 +42,45 @@
 
 .pastCharInfo {
     padding-left: 0px;
+}
+
+.pastChar p, 
+.pastChar h4 {
+    margin: 0px;
+}
+
+.skillContainer h4{
+    padding-left: 0px;
+    text-align: center;
+}
+
+.skillContainer {
+    gap: 10px;
+}
+
+@media (max-width: 1000px) {
+    .pastCharList {
+        gap: 10px;
+
+    }
+
+    .pastChar {
+        width: calc((100% / 2) - 20px);
+    }
+}
+
+@media (max-width: 600px) {
+    .pastChar {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 500px) {
+    .pastCharList {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .pastChar {
+        width: 100%;
+    }
 }
