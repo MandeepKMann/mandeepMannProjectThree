@@ -1,6 +1,7 @@
 import { Fragment } from "react"
 import "./Form.css"
 import { Link } from "react-router-dom"
+import Home from "./assets/home.png"
 
 const Form = ({handleChange, userInput, handleSubmit}) => {
 
@@ -11,14 +12,18 @@ const Form = ({handleChange, userInput, handleSubmit}) => {
     return (
         <Fragment>
             <section className="formSection">
-                <div className="routerButton">
-                <Link to="/warriorsinfo">
-                    <button>BACK</button>
-                </Link>
-                <Link to="characters">
-                    <button>View Characters</button>
-                </Link>
-                </div>
+                    <Link to="/">
+                        <img src={Home} alt="The home button" className="homeButton"/>
+                    </Link>
+
+                    <Link to="/warriorsinfo">
+                        <button className="back">Go Back</button>
+                    </Link>
+
+                    <Link to="characters">
+                        <button className="toChars">View Characters</button>
+                    </Link>
+
                 <div className="wrapper formFlex">
                     <div className="formContainer">
                         <h2>Create Your Warrior</h2>

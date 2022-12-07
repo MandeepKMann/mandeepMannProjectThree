@@ -36,11 +36,17 @@ button {
     font-family: 'Exo 2', sans-serif;
 }
 
+a,
+a:visited {
+    text-decoration: none;
+}
+
 button {
     line-height: 1.5;
     font-size: 2rem;
     font-weight: bold;
     text-align: center;
+    cursor: pointer;
 }
 
 ul {

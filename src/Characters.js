@@ -3,13 +3,17 @@ import './Characters.css'
 import warriors from "./warriors.js";
 import BackToTopButton from './BackToTopButton.js';
 import { Link } from 'react-router-dom';
+import Home from "./assets/home.png"
 
 const Characters = ({characterList}) => {
     return (
         <section className="pastCharactersSection">
             <div className="wrapper">
+            <Link to="/">
+                <img src={Home} alt="The home button" className="homeButton"/>
+            </Link>
             <Link to="/warriorsinfo/form">
-                <button>BACK</button>
+                <button className='toCreate'>Create Another Warrior</button>
             </Link>
                 <ul className="pastCharList">
                 {characterList.map((prevCharacter) => {

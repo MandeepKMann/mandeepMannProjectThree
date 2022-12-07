@@ -2,20 +2,19 @@ import warriors from "./warriors.js";
 import "./WarriorInfo.css"
 import { Link } from "react-router-dom";
 import BackToTopButton from "./BackToTopButton.js";
+import Home from "./assets/home.png"
 
 const WarriorInfo = () => {
     return (
         <section className="information">
             <div className="wrapper">
             <Link to="/">
-                <button>BACK</button>
+                <img src={Home} alt="The home button" className="homeButton"/>
             </Link>
                 <div className="info">
                     <h2 className='infoTitle'>The Three Ways of the Warrior</h2>
                     <p>I feel an unusual energy from you. I know that you've only recently become a Warrior. How did you become so strong in such a short time?</p>
                     <p>I think it's time for you to choose your path. A Warrior can choose from three different paths. A Fighter is a normal Warrior who uses a sword or axe, a Page looks out for enemies and shields others, and a Spearman uses a long weapon, such as a spear or other type of polearm.</p>
-                    <p>What do you think? Are you ready for a second path?</p>
-
                 </div>
                 <ul className='warriorsInfo'>
                     {warriors.map((subClass) => {
@@ -40,8 +39,9 @@ const WarriorInfo = () => {
                         )
                     })}
                 </ul>
+            <p className="question">What do you think? Are you ready for a second path?</p>
             <Link to="form">
-                <button>I'm Ready</button>
+                <button className="next">I'm Ready</button>
             </Link>
 
             </div>
