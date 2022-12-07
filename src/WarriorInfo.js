@@ -3,6 +3,7 @@ import "./WarriorInfo.css"
 import { Link } from "react-router-dom";
 import BackToTopButton from "./BackToTopButton.js";
 import Home from "./assets/home.png"
+import './App.css';
 
 const WarriorInfo = () => {
     return (

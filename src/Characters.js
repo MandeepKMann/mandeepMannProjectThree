@@ -4,6 +4,7 @@ import warriors from "./warriors.js";
 import BackToTopButton from './BackToTopButton.js';
 import { Link } from 'react-router-dom';
 import Home from "./assets/home.png"
+import './App.css';
 
 const Characters = ({characterList}) => {
     return (

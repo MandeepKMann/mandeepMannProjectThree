@@ -2,6 +2,7 @@ import { Fragment } from "react"
 import "./Form.css"
 import { Link } from "react-router-dom"
 import Home from "./assets/home.png"
+import './App.css';
 
 const Form = ({handleChange, userInput, handleSubmit}) => {
 
