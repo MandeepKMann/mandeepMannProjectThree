@@ -11,6 +11,7 @@ import Form from './Form.js';
 import Characters from './Characters.js';
 // import Divider from './Divider.js';
 import Header from './Header.js';
+import Error from './Error.js';
 
 
 // CSS
@@ -119,6 +120,7 @@ function App() {
                     element={ <Characters
                         characterList={characterList}
                     /> } />
+                <Route path="*" element={ <Error />} />
             </Routes>
 
             {/* <main>

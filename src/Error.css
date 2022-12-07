@@ -1,0 +1,22 @@
+.Error {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.6)),
+            url(./assets/blackMageBackground.jpg) no-repeat center;
+        background-size: cover;;
+}
+
+.Error h1 {
+    color: white;
+}
+
+.Error button {
+    padding-left: 10px;
+    padding-right: 10px;
+}
