@@ -1,9 +1,10 @@
-.Error {
+.error {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
+    padding: 100px 0px 100px 0px;
     background:
         linear-gradient(
             rgba(0, 0, 0, 0.6),
@@ -12,11 +13,32 @@
         background-size: cover;;
 }
 
-.Error h1 {
-    color: white;
+.errorFlex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.Error button {
+.error h1 {
+    color: white;
+    text-align: center;
+    margin: 0px;
+}
+
+.errorImage img {
+    max-width: 100%;
+}
+
+#escape {
     padding-left: 10px;
     padding-right: 10px;
+}
+
+/********** MEDIA QUERIES **********/
+
+@media (max-width: 500px) {
+    .errorFlex {
+        gap: 30px;
+    }
 }

@@ -95,6 +95,8 @@ label {
     padding-right: 10px;
 }
 
+/********** MEDIA QUERIES **********/
+
 @media (max-width: 1500px) {
     .formContainer {
         width: 100%;

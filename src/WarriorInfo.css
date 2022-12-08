@@ -75,6 +75,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
 }
 
 .skillTitle {
@@ -98,6 +99,8 @@ h4 {
     margin: 0 auto;
 }
 
+/********** MEDIA QUERIES **********/
+
 @media (max-width: 1600px) {
     .warriorsInfoUl {
         flex-direction: column;
@@ -109,7 +112,7 @@ h4 {
 
     .subClassDescription,
     .mainSkill p {
-        max-width: 100%;
+        width: 100%;
     }
 }
 
@@ -120,8 +123,9 @@ h4 {
 }
 
 @media (max-width: 600px) {
-    .subClassInfo {
+    .subClassInfo,
+    .subClassDescription,
+    .mainSkill p {
         text-align: center;
-        width: 100%;
     }
 }

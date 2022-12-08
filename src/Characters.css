@@ -83,6 +83,8 @@
     font-size: 1.3rem;
 }
 
+/********** MEDIA QUERIES **********/
+
 @media (max-width: 1095px) {
     .createdCharList {
         gap: 10px;
