@@ -42,7 +42,7 @@ const Characters = ({characterList}) => {
                                             </div>
                                         </Fragment>
                                     ) 
-                                } {/* END if statement */}
+                                }
                             })}{/* END warriors.map */}   
                         </li>
                     )
