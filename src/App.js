@@ -1,5 +1,5 @@
 // IMPORTS
-import { Fragment, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import app from './firebase.js'
 import { getDatabase, ref, push, onValue } from 'firebase/database';
 import { Routes, Route } from 'react-router-dom';
@@ -14,15 +14,16 @@ import Error from './Error.js';
 import './App.css';
 
 function App() {
-    
+    // useState to hold multiple user inputs from my form in Form.js
     const [userInput, setUserInput] = useState({
         userSelection: "",
         userCharName: ""
     })
 
+    // useState to hold data from firebase to display on Characters.js
     const [characterList, setCharacterList] = useState([])
 
-// https://www.youtube.com/watch?v=-KBS93RlUCY
+// Learned from: https://www.youtube.com/watch?v=-KBS93RlUCY
     const handleChange = (e) => {
         const {name, value} = e.target
 
@@ -33,6 +34,7 @@ function App() {
 
     }
     
+    // Learned from: https://bobbyhadz.com/blog/javascript-check-if-string-contains-special-characters
     const checkSpecialChar = (string) => {
         // eslint-disable-next-line
         const specialChars = (/[ `!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/);
@@ -40,10 +42,10 @@ function App() {
     }
 
 
-
+    // Handle submission from Form.js
     const handleSubmit = (e) => {
         e.preventDefault();
-        
+        // Show a warning if user uses special characters
         if (checkSpecialChar(userInput.userCharName) === true) {
 
             Swal.fire({
@@ -55,6 +57,7 @@ function App() {
                 showConfirmButton: false,
                 timer: 3000
             })
+        // Show confirmation that user input has been submitted and push to firebase
         } else if (checkSpecialChar(userInput.userCharName) === false) {
             
             const database = getDatabase(app);
@@ -79,7 +82,7 @@ function App() {
         }
     }
     
-
+    // Get data from firebase and store in characterList
     useEffect( () => {
         const database = getDatabase(app);
         const dbRef = ref(database);
@@ -99,49 +102,23 @@ function App() {
     }, [] )
 
     return (
-        <Fragment>
-
-            <Routes>
-                <Route path="/" element={ <Header /> } />
-                <Route path="/warriorsinfo" element={ <WarriorInfo /> } /> 
-                <Route 
-                    path="/warriorsinfo/form" 
-                    element={ <Form
-                        handleChange={handleChange}
-                        userInput={userInput}
-                        handleSubmit={handleSubmit}
-                    /> } />
-                <Route 
-                    path="/warriorsinfo/form/characters" 
-                    element={ <Characters
-                        characterList={characterList}
-                    /> } />
-                <Route path="*" element={ <Error />} />
-            </Routes>
-
-            {/* <main>
-                <Divider />
-
-
-                <WarriorInfo/>
-
-                <Divider />
-
-                <Form
+        <Routes>
+            <Route path="/" element={ <Header /> } />
+            <Route path="/warriorsinfo" element={ <WarriorInfo /> } /> 
+            <Route 
+                path="/warriorsinfo/form" 
+                element={ <Form
                     handleChange={handleChange}
                     userInput={userInput}
                     handleSubmit={handleSubmit}
-                />
-
-                <Divider />
-                
-                <Characters
+                /> } />
+            <Route 
+                path="/warriorsinfo/form/characters" 
+                element={ <Characters
                     characterList={characterList}
-                />
-                    
-            </main>
-                <BackToTopButton /> */}
-        </Fragment>
+                /> } />
+            <Route path="*" element={ <Error />} />
+        </Routes>
     );
 }
 
