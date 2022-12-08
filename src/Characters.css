@@ -7,17 +7,17 @@
     padding: 100px 0 100px 0;
 }
 
-.pastCharList {
+.createdCharList {
     display: flex;
     flex-wrap: wrap;
-    margin-left: 0px;
+    padding-left: 0px;
     gap: 20px;
     justify-content: space-around;
     flex-direction: row-reverse;
     flex-wrap: wrap-reverse;
 }
 
-.pastChar {
+.createdChar {
     border: 2px solid black;
     border-radius: 1%;
     background-color: rgba(0, 0, 0, 0.7);
@@ -43,18 +43,16 @@
     width: 80%;
 }
 
-.pastChar p,
-.pastChar li,
-.pastChar img {
+.createdChar p,
+.createdChar li,
+.createdChar img {
     color: white;
 }
 
-.pastCharInfo {
-    padding-left: 0px;
-}
 
-.pastChar p, 
-.pastChar h4 {
+
+.createdChar p, 
+.createdChar h4 {
     margin: 0px;
 }
 
@@ -65,45 +63,53 @@
 
 .skillContainer {
     gap: 10px;
+    display: flex;
 }
 
-.toCreate {
+.skillContainer img {
+    width: 32px;
+    height: 32px;
+}
+
+#toCreate {
     width: auto;
     height: 60px;
     position: absolute;
-    top: 40px;
-    right: 40px;
+    top: 30px;
+    right: 30px;
     font-size: 2rem;
     line-height: 1.3;
-    border-radius: 1%;
     padding: 10px;
     font-size: 1.3rem;
-    text-align: center;
 }
 
-@media (max-width: 1000px) {
-    .pastCharList {
+@media (max-width: 1095px) {
+    .createdCharList {
         gap: 10px;
 
     }
 
-    .pastChar {
+    .createdChar {
         width: calc((100% / 2) - 20px);
     }
 }
 
-@media (max-width: 600px) {
-    .pastChar {
-        padding: 10px;
-    }
-}
-
-@media (max-width: 500px) {
-    .pastCharList {
+@media (max-width: 650px) {
+    .createdCharList {
         flex-direction: column-reverse;
         align-items: center;
     }
-    .pastChar {
+    .createdChar {
         width: 100%;
+    }
+
+    #toCreate {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 450px) {
+    #toCreate {
+        font-size: 0.7rem;
     }
 }

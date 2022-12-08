@@ -1,6 +1,8 @@
-import './Header.css';
+// npm packages
 import { Link } from 'react-router-dom';
 
+// Style Imports
+import './Header.css';
 
 import explorers from './assets/explorers.png';
 

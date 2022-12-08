@@ -32,7 +32,9 @@ html {
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600&display=swap');
 
 body,
-button {
+button,
+input,
+select {
     font-family: 'Exo 2', sans-serif;
 }
 

@@ -3,25 +3,28 @@ import './Characters.css'
 import warriors from "./warriors.js";
 import BackToTopButton from './BackToTopButton.js';
 import { Link } from 'react-router-dom';
-import Home from "./assets/home.png"
-import './App.css';
+import HomeButton from "./HomeButton.js"
 
 const Characters = ({characterList}) => {
     return (
         <section className="pastCharactersSection">
+
+            {/* Home button to Header.js and Link back to Form.js*/}
+            <HomeButton />
+ 
+            <Link to="/warriorsinfo/form" className='routerLink' id='toCreate'>
+                Create Another Warrior
+            </Link>
+ 
             <div className="wrapper">
-            <Link to="/">
-                <img src={Home} alt="The home button" className="homeButton"/>
-            </Link>
-            <Link to="/warriorsinfo/form">
-                <button className='toCreate'>Create Another Warrior</button>
-            </Link>
-                <ul className="pastCharList">
+                <ul className="createdCharList">
+                {/* Map through data from firebase */}
                 {characterList.map((prevCharacter) => {
-                // console.log(prevCharacter.key)
                     return (
-                        <li key={prevCharacter.key} className="pastChar">
+                        <li key={prevCharacter.key} className="createdChar">
                             <p className="charIGN">{prevCharacter.character.userCharName}</p>
+                            
+                            {/* Map through my original Data fromw warriors.js to compare with firebase data */}
                             {/* eslint-disable-next-line */}
                             {warriors.map((subClass) => {
                                 if (subClass.class === prevCharacter.character.userSelection) {
@@ -35,15 +38,15 @@ const Characters = ({characterList}) => {
                                             </div>
                                         </Fragment>
                                     ) 
-                                } 
-                            })}
-                            
+                                } {/* END if statement */}
+                            })}{/* END warriors.map */}   
                         </li>
                     )
-                })}
+                })}{/* END charachterlist.map */}
                 </ul>
-            </div>
-                <BackToTopButton />
+            </div>{/* END .wrapper */}
+
+            <BackToTopButton />
         </section>
 
     )
