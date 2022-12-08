@@ -2,8 +2,8 @@
 import { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 // COMPONENTS
-import BackToTopButton from './ButtonComponents/BackToTopButton';
-import HomeButton from './ButtonComponents/HomeButton';
+import BackToTopButton from './buttonComponents/BackToTopButton';
+import HomeButton from './buttonComponents/HomeButton';
 // JS FILES
 import warriors from "./warriors.js";
 // CSS

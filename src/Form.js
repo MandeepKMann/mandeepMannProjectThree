@@ -1,7 +1,7 @@
 // IMPORTS
 import { Link } from "react-router-dom"
 // COMPONENTS
-import HomeButton from "./ButtonComponents/HomeButton"
+import HomeButton from "./buttonComponents/HomeButton"
 // CSS
 import "./Form.css"
 
