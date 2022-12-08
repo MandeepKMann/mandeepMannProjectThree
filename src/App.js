@@ -1,19 +1,15 @@
+// IMPORTS
 import { Fragment, useEffect, useState } from 'react';
+import app from './firebase.js'
 import { getDatabase, ref, push, onValue } from 'firebase/database';
 import { Routes, Route } from 'react-router-dom';
-// Installed
-import app from './firebase.js'
 import Swal from 'sweetalert2'
-
-// Sections
+// COMPONENTS
+import Header from './Header.js';
 import WarriorInfo from './WarriorInfo.js';
 import Form from './Form.js';
 import Characters from './Characters.js';
-// import Divider from './Divider.js';
-import Header from './Header.js';
 import Error from './Error.js';
-
-
 // CSS
 import './App.css';
 

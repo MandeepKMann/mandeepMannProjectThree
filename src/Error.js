@@ -1,6 +1,8 @@
-// import Yeti from "./assets/yetiError.png"
+// IMPORTS
 import { Link } from "react-router-dom"
+// CSS
 import "./Error.css"
+// IMAGES
 import blackMage from "./assets/blackMage.png"
 
 

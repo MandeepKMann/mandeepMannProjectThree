@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import Home from "./assets/home.png"
+import Home from "../assets/home.png"
 import "./HomeButton.css"
 
 const HomeButton = () => {

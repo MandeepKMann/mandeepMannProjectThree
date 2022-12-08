@@ -1,9 +1,8 @@
-// npm packages
+// IMPORTS
 import { Link } from 'react-router-dom';
-
-// Style Imports
+// CSS
 import './Header.css';
-
+// IMAGES
 import explorers from './assets/explorers.png';
 
 

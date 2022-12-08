@@ -1,11 +1,13 @@
+// IMAGES
+// HERO IMAGES
 import heroImg from "./assets/warriorsAssets/hero.png"
 import ragingBlow from "./assets/warriorsAssets/ragingBlowIcon.png"
 import ragingBlowEffect from "./assets/warriorsAssets/ragingBlowEffect.gif"
-
+// PALADIN IMAGES
 import paladinImg from "./assets/warriorsAssets/paladin.png"
 import divineStigma from "./assets/warriorsAssets/divineStigmaIcon.png"
 import divineStigmaEffect from "./assets/warriorsAssets/divineStigmaEffect.gif"
-
+// DARK KNIGHT IMAGES
 import darkKnightImg from "./assets/warriorsAssets/darkKnight.png"
 import darkImpale from "./assets/warriorsAssets/darkImpaleIcon.png"
 import darkImpaleEffect from "./assets/warriorsAssets/darkImpaleEffect.gif"

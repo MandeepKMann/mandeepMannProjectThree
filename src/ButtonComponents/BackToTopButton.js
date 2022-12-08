@@ -1,9 +1,10 @@
-// Done with help from Daman and https://www.youtube.com/watch?v=pKbNCWb6USQ
-import React from "react"
+// IMPORTS
 import { useState, useEffect } from "react"
-
+// CSS
 import "./BackToTopButton.css"
 
+
+// Done with help from Daman and https://www.youtube.com/watch?v=pKbNCWb6USQ
 const BackToTopButton = () => {
     const [backToTopButton, setBackToTopButton] = useState(false);
 

@@ -1,9 +1,13 @@
+// IMPORTS
 import { Fragment } from 'react';
-import './Characters.css'
-import warriors from "./warriors.js";
-import BackToTopButton from './BackToTopButton.js';
 import { Link } from 'react-router-dom';
-import HomeButton from "./HomeButton.js"
+// COMPONENTS
+import BackToTopButton from './ButtonComponents/BackToTopButton';
+import HomeButton from './ButtonComponents/HomeButton';
+// JS FILES
+import warriors from "./warriors.js";
+// CSS
+import './Characters.css'
 
 const Characters = ({characterList}) => {
     return (

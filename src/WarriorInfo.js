@@ -1,8 +1,11 @@
-import warriors from "./warriors.js";
+// IMPORTS
 import { Link } from "react-router-dom";
-import BackToTopButton from "./BackToTopButton.js";
-import HomeButton from "./HomeButton.js";
-
+// COMPONENTS
+import BackToTopButton from "./ButtonComponents/BackToTopButton.js";
+import HomeButton from "./ButtonComponents/HomeButton.js";
+// JS FILES
+import warriors from "./warriors.js";
+// CSS
 import "./WarriorInfo.css"
 
 const WarriorInfo = () => {
