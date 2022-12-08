@@ -47,7 +47,7 @@ header {
                 linear-gradient(
                     rgba(0, 0, 0, 0.8),
                     rgba(0, 0, 0, 0.8)),
-                url(./assets/explorers.png) no-repeat center,
+                url(../assets/explorers.png) no-repeat center,
                 #0F141A;
     }
 

@@ -1,7 +1,7 @@
 // IMPORTS
 import { useState, useEffect } from "react"
 // CSS
-import "./BackToTopButton.css"
+import "../styles/BackToTopButton.css"
 
 
 // Done with help from Daman and https://www.youtube.com/watch?v=pKbNCWb6USQ

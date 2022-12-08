@@ -1,9 +1,9 @@
 // IMPORTS
 import { Link } from 'react-router-dom';
 // CSS
-import './Header.css';
+import '../styles/Header.css';
 // IMAGES
-import explorers from './assets/explorers.png';
+import explorers from '../assets/explorers.png';
 
 
 const Header = () => {

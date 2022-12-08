@@ -7,7 +7,7 @@
     background:
         linear-gradient(rgba(0, 0, 0, 0.6),
             rgba(0, 0, 0, 0.6)),
-        url(./assets/futurePerionBackground.jpg) no-repeat center;
+        url(../assets/futurePerionBackground.jpg) no-repeat center;
     background-size: cover;
 }
 
@@ -61,7 +61,7 @@ select {
     background-color: #24222D;
     color: white;
     font-weight: bold;
-    background: url(./assets/smallChevronDown.png) no-repeat right #24222D;
+    background: url(../assets/smallChevronDown.png) no-repeat right #24222D;
     appearance: none;
     background-position-x: 97%;
 }

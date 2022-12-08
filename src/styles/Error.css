@@ -9,7 +9,7 @@
         linear-gradient(
             rgba(0, 0, 0, 0.6),
             rgba(0, 0, 0, 0.6)),
-            url(./assets/blackMageBackground.jpg) no-repeat center;
+            url(../assets/blackMageBackground.jpg) no-repeat center;
         background-size: cover;;
 }
 

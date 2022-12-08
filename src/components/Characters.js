@@ -2,12 +2,12 @@
 import { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 // COMPONENTS
-import BackToTopButton from './buttonComponents/BackToTopButton';
-import HomeButton from './buttonComponents/HomeButton';
+import BackToTopButton from '../components/BackToTopButton.js';
+import HomeButton from "../components/HomeButton.js"
 // JS FILES
-import warriors from "./warriors.js";
+import warriors from "../warriors.js";
 // CSS
-import './Characters.css'
+import '../styles/Characters.css'
 
 const Characters = ({characterList}) => {
     return (

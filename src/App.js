@@ -5,11 +5,11 @@ import { getDatabase, ref, push, onValue } from 'firebase/database';
 import { Routes, Route } from 'react-router-dom';
 import Swal from 'sweetalert2'
 // COMPONENTS
-import Header from './Header.js';
-import WarriorInfo from './WarriorInfo.js';
-import Form from './Form.js';
-import Characters from './Characters.js';
-import Error from './Error.js';
+import Header from './components/Header.js';
+import WarriorInfo from './components/WarriorInfo.js';
+import Form from './components/Form.js';
+import Characters from './components/Characters.js';
+import Error from './components/Error.js';
 // CSS
 import './App.css';
 

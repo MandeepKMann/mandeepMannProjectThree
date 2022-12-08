@@ -1,9 +1,9 @@
 // IMPORTS
 import { Link } from "react-router-dom"
 // COMPONENTS
-import HomeButton from "./buttonComponents/HomeButton"
+import HomeButton from "../components/HomeButton"
 // CSS
-import "./Form.css"
+import "../styles/Form.css"
 
 const Form = ({handleChange, userInput, handleSubmit}) => {
 
