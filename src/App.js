@@ -50,7 +50,7 @@ function App() {
 
             Swal.fire({
                 icon: 'warning',
-                text: 'Your character name can only contain letters and numbers!',
+                title: 'Your character name can only contain letters and numbers!',
                 background: '#0F141A',
                 color: 'white',
                 borderRadius: '1',
@@ -72,12 +72,12 @@ function App() {
            
             Swal.fire({
                 icon: 'success',
-                text: 'Your character has been created!',
+                title: 'Your character has been created!',
+                text: `Click on 'View Characters' to see your Warrior!`,
                 background: '#0F141A',
                 color: 'white',
                 borderRadius: '1',
-                showConfirmButton: false,
-                timer: 3000
+                showConfirmButton: true
             })
         }
     }
