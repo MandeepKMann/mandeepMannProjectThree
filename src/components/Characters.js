@@ -34,7 +34,7 @@ const Characters = ({characterList}) => {
                                 if (subClass.class === prevCharacter.character.userSelection) {
                                     return (
                                         <Fragment>
-                                            <img src={subClass.urlName} alt={`A cute little ${subClass.class}`} className="pastCharImg"/>
+                                            <img src={subClass.urlName} alt={`An image of a ${subClass.class}`} className="pastCharImg"/>
                                             <p className='nameOfClass'>Class: {prevCharacter.character.userSelection}</p>
                                             <div className="skillContainer">
                                                 <img src={subClass.mainAttack.urlName} alt={`Icon for ${subClass.mainAttack.skillName} skill`} />

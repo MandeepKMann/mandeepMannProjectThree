@@ -20,7 +20,7 @@ const WarriorInfo = () => {
                 <div className="subClassInfo">
                     <h2 className='infoTitle'>The Three Ways of the Warrior</h2>
                     <p>I feel an unusual energy from you. I know that you've only recently become a Warrior. How did you become so strong in such a short time?</p>
-                    <p>I think it's time for you to choose your path. A Warrior can choose from three different paths. A Fighter is a normal Warrior who uses a sword or axe, a Page looks out for enemies and shields others, and a Spearman uses a long weapon, such as a spear or other type of polearm.</p>
+                    <p>I think it's time for you to choose your path. A Warrior can choose from three different paths. A Hero is a normal Warrior who uses a sword or axe, a Paladin looks out for enemies and shields others, and a Dark Knight uses a long weapon, such as a spear or other type of polearm.</p>
                 </div>{/* END .subClassInfo */}
 
                 {/* ul for all three warrior subclasses */}
@@ -35,7 +35,7 @@ const WarriorInfo = () => {
                                 <p className="subClassDescription">{subClass.description}</p>
 
                                 <div className="imageContainer">
-                                    <img className="subClassImg" src={subClass.urlName} alt={`A cute little ${subClass.class}`} />
+                                    <img className="subClassImg" src={subClass.urlName} alt={`An image of a ${subClass.class}`} />
                                 </div>{/* END .imageContainer */}
 
                                 <div className="mainSkill">
