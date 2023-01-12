@@ -10,8 +10,8 @@ const Header = () => {
 
     return (
         <header>
-            <div className="wrapper">
-                <div className="headerFlex">
+            <div className="headerFlex">
+                <div className="wrapper">
                     <div className="headerContent">
                         <div className="headerTextContainer">
                             <h1 className="headerTitle">Path of the Warrior</h1>
@@ -29,8 +29,8 @@ const Header = () => {
                     <Link to="warriorsinfo" className='routerLink headerLink'>
                         I'm Ready
                     </Link>
-                </div>{/* END .headerFlex */}
-            </div>
+                </div>
+            </div>{/* END .headerFlex */}
         </header>
     )
 }
