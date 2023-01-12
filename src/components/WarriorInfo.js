@@ -35,7 +35,7 @@ const WarriorInfo = () => {
                                 <p className="subClassDescription">{subClass.description}</p>
 
                                 <div className="imageContainer">
-                                    <img className="subClassImg" src={subClass.urlName} alt={`An image of a ${subClass.class}`} />
+                                    <img className="subClassImg" src={subClass.urlName} alt={`A ${subClass.class}`} />
                                 </div>{/* END .imageContainer */}
 
                                 <div className="mainSkill">
